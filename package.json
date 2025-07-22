@@ -47,6 +47,7 @@
     "jsdom": "^26.1.0",
     "tailwindcss": "^4",
     "ts-jest": "^29.4.0",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vitest": "^3.2.4"
   }
 }

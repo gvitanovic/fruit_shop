@@ -1,3 +1,5 @@
+![Watch the demo](frutty.gif)
+
 # Fruit Shop - BFF Architecture
 
 This project implements a Backend for Frontend (BFF) pattern where the Next.js application acts as an intermediary between the frontend and the backend server.
