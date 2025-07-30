@@ -4,6 +4,7 @@
   "description": "JSON Server backend for Fruit Shop application",
   "main": "server.js",
   "scripts": {
+    "build": "echo 'Server ready for deployment'",
     "start": "node server.js",
     "dev": "node server.js"
   },
