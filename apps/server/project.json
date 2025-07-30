@@ -1,0 +1,45 @@
+{
+    "name": "server",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "apps/server",
+    "projectType": "application",
+    "targets": {
+        "start": {
+            "executor": "nx:run-commands",
+            "options": {
+                "command": "node apps/server/server.js"
+            }
+        },
+        "serve": {
+            "executor": "nx:run-commands",
+            "options": {
+                "command": "node apps/server/server.js"
+            }
+        },
+        "dev": {
+            "executor": "nx:run-commands",
+            "options": {
+                "command": "node apps/server/server.js"
+            }
+        },
+        "build": {
+            "executor": "nx:run-commands",
+            "options": {
+                "command": "echo 'Server does not require build step'",
+                "cwd": "apps/server"
+            },
+            "outputs": []
+        },
+        "lint": {
+            "executor": "nx:run-commands",
+            "options": {
+                "command": "echo 'No linting configured for server'",
+                "cwd": "apps/server"
+            }
+        }
+    },
+    "tags": [
+        "type:app",
+        "platform:node"
+    ]
+}

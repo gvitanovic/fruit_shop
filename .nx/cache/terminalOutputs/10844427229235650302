@@ -1,0 +1,13 @@
+> nx run ui-components:build
+
+[36mvite v5.4.19 [32mbuilding for production...[36m[39m
+[33m
+[1m(!)[22m outDir [37m[2m/Users/gv/dist/libs/ui-components[22m[33m is not inside project root and will not be emptied.
+Use --emptyOutDir to override.
+[39m
+[2K[1Gtransforming (1) [2mlibs/ui-components/src/index.ts[22m[2K[1G[2K[1G[2K[1G[2K[1G[2K[1G[2K[1G[2K[1G[2K[1G[2K[1G[2K[1G[2K[1G[2K[1G[2K[1G[2K[1G[2K[1G[2K[1G[2K[1G[2K[1G[2K[1G[2K[1G[2K[1G[2K[1G[2K[1G[2K[1G[2K[1G[2K[1G[2K[1G[2K[1G[2K[1G[2K[1G[2K[1G[2K[1G[2K[1G[2K[1G[2K[1G[2K[1G[2K[1G[2K[1G[2K[1G[2K[1G[2K[1G[2K[1G[2K[1G[2K[1Gtransforming (85) [2mnode_modules/.pnpm/@tanstack+query-core@5.83.0/node_modules/@tanstack/query-core/bui[2K[1G[2K[1G[32m✓[39m 149 modules transformed.
+[2K[1Grendering chunks (1)...[2K[1G[2K[1Gcomputing gzip size (0)...[2K[1Gcomputing gzip size (1)...[2K[1G[2m../../dist/libs/ui-components/[22m[36mindex.mjs  [39m[1m[2m199.13 kB[22m[1m[22m[2m │ gzip: 48.10 kB[22m
+[2K[1Grendering chunks (1)...[2K[1G[2K[1Gcomputing gzip size (1)...[2K[1G[2m../../dist/libs/ui-components/[22m[36mindex.js  [39m[1m[2m135.84 kB[22m[1m[22m[2m │ gzip: 40.81 kB[22m
+[32m✓ built in 403ms[39m
+
+[2m../../dist/libs/ui-components/package.json[22m

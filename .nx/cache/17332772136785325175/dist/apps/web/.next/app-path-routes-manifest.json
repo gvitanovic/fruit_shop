@@ -1,0 +1,16 @@
+{
+  "/api/products/[id]/route": "/api/products/[id]",
+  "/api/products/route": "/api/products",
+  "/api/suggestions/route": "/api/suggestions",
+  "/api/user/password/route": "/api/user/password",
+  "/robots.txt/route": "/robots.txt",
+  "/sitemap.xml/route": "/sitemap.xml",
+  "/favicon.ico/route": "/favicon.ico",
+  "/api/cart/remove/route": "/api/cart/remove",
+  "/api/cart/route": "/api/cart",
+  "/_not-found/page": "/_not-found",
+  "/cart/page": "/cart",
+  "/products/page": "/products",
+  "/profile/page": "/profile",
+  "/page": "/"
+}

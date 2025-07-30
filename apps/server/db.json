@@ -1,0 +1,66 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Orange",
+      "price": 2.49,
+      "oldPrice": null,
+      "stock": 100,
+      "colors": [
+        "Orange"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Banana",
+      "price": 3.99,
+      "oldPrice": null,
+      "stock": 50,
+      "package": 2,
+      "colors": [
+        "Yellow"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Apple",
+      "price": 1.99,
+      "oldPrice": 2.49,
+      "stock": 10,
+      "colors": [
+        "Green"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Lime",
+      "price": 2.1,
+      "oldPrice": 2.79,
+      "stock": 45,
+      "package": 3,
+      "colors": [
+        "Green"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Pineapple",
+      "price": 4.99,
+      "oldPrice": null,
+      "stock": 20,
+      "package": 1,
+      "colors": [
+        "Green",
+        "Yellow"
+      ]
+    }
+  ],
+  "cart": [
+    {
+      "id": 1
+    },
+    {
+      "id": 2
+    }
+  ]
+}
