@@ -15,17 +15,14 @@
 
 # next.js
 /.next/
-/out/
 **/.next/
+/out/
+**/out/
 
 # production
 /build
 /dist
-
-# nx
-.nx/cache
-.nx/workspace-data
-.nx/installation
+**/dist/
 
 # misc
 .DS_Store
@@ -46,3 +43,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Nx
+.nx/cache
+.nx/workspace-data
