@@ -19,492 +19,236 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": "dist/apps/web/.next/static/chunks/3da69e0a-f692250034f40d68.js",
-        "hash": "6773529052057715483"
-      },
-      {
-        "file": "dist/apps/web/.next/server/pages/_error.js",
-        "hash": "6502712470589822895"
-      },
-      {
-        "file": "frutty.gif",
-        "hash": "12275096884789427673"
-      },
-      {
-        "file": "dist/libs/infrastructure/index.js",
-        "hash": "9890080639671047450"
-      },
-      {
-        "file": "dist/apps/web/.next/static/chunks/framework-71fb8592b151a85d.js",
-        "hash": "765805994737164561"
+        "file": "dist/apps/web/.next/server/functions-config-manifest.json",
+        "hash": "18417749098027325250"
       },
       {
         "file": "dist/apps/web/.next/server/pages/_error.js.nft.json",
         "hash": "17236131678347496893"
       },
       {
-        "file": "dist/apps/web/.next/server/chunks/129.js",
-        "hash": "9009426996720652600"
-      },
-      {
-        "file": "dist/apps/web/.next/build-manifest.json",
-        "hash": "16078909928464479762"
-      },
-      {
-        "file": "dist/apps/web/.next/server/app/robots.txt/route_client-reference-manifest.js",
-        "hash": "7480009685803014871"
-      },
-      {
-        "file": "dist/libs/ui-components/package.json",
-        "hash": "10525126000894787081"
-      },
-      {
-        "file": "dist/apps/web/.next/static/Bezjpbh8CIwxv0D5wt5Fo/_buildManifest.js",
-        "hash": "11708650850206136742"
-      },
-      {
-        "file": "dist/apps/web/.next/static/media/747892c23ea88013-s.woff2",
-        "hash": "2484364382134452397"
-      },
-      {
-        "file": ".vercelignore",
-        "hash": "13134635047374381888"
-      },
-      {
-        "file": "dist/apps/web/.next/static/media/93f479601ee12b01-s.p.woff2",
-        "hash": "12815628345386823549"
-      },
-      {
-        "file": "dist/libs/ui-components/index.js",
-        "hash": "383674024324477551"
-      },
-      {
-        "file": "dist/apps/web/.next/server/pages/404.html",
-        "hash": "7244317844207264439"
-      },
-      {
-        "file": "vitest.config.ts",
-        "hash": "2227125307202795161"
-      },
-      {
-        "file": "dist/apps/web/.next/cache/webpack/client-production/0.pack",
-        "hash": "5084574386063790034"
-      },
-      {
-        "file": "dist/apps/web/.next/server/chunks/472.js",
-        "hash": "4827131070133291817"
-      },
-      {
-        "file": "dist/apps/web/.next/static/chunks/app/_not-found/page-caae2dfca53830c8.js",
-        "hash": "4720166682659595568"
-      },
-      {
-        "file": "dist/apps/web/.next/server/middleware-manifest.json",
-        "hash": "9889576824779923310"
-      },
-      {
-        "file": "dist/libs/infrastructure/package.json",
-        "hash": "9292883001305438367"
-      },
-      {
-        "file": "dist/apps/web/.next/server/app/profile/page.js",
-        "hash": "4915685853502354452"
-      },
-      {
-        "file": "dist/apps/web/.next/server/app/profile/page_client-reference-manifest.js",
-        "hash": "9707667122882520917"
-      },
-      {
-        "file": "dist/apps/web/.next/server/app/page_client-reference-manifest.js",
-        "hash": "5960276789297624983"
-      },
-      {
-        "file": "dist/apps/web/.next/server/next-font-manifest.js",
-        "hash": "2441501734314723431"
-      },
-      {
-        "file": "dist/apps/web/.next/static/media/ba015fad6dcf6784-s.woff2",
-        "hash": "1725881887190334938"
-      },
-      {
-        "file": "dist/apps/web/.next/server/functions-config-manifest.json",
-        "hash": "18417749098027325250"
+        "file": "dist/apps/web/.next/server/pages/500.html",
+        "hash": "7032629265708848587"
       },
       {
         "file": "dist/apps/web/.next/diagnostics/framework.json",
         "hash": "6178129155669448615"
       },
       {
-        "file": "dist/apps/web/.next/types/app/api/cart/route.ts",
-        "hash": "7246879957565546896"
+        "file": "dist/libs/hooks/index.js",
+        "hash": "8342666657336694893"
       },
       {
-        "file": "dist/apps/web/.next/server/server-reference-manifest.json",
-        "hash": "1783532110917280485"
-      },
-      {
-        "file": "dist/apps/web/public/next.svg",
-        "hash": "8300767200008744458"
-      },
-      {
-        "file": "dist/apps/web/.next/server/app/_not-found/page.js.nft.json",
-        "hash": "13405253755564979118"
-      },
-      {
-        "file": "dist/apps/web/.next/react-loadable-manifest.json",
-        "hash": "1389868326933519382"
-      },
-      {
-        "file": "dist/apps/web/.next/server/next-font-manifest.json",
-        "hash": "9932165303186982145"
-      },
-      {
-        "file": "dist/apps/web/public/manifest.json",
-        "hash": "6547894590055749529"
-      },
-      {
-        "file": "dist/apps/web/.next/types/app/profile/page.ts",
-        "hash": "16290513957653254190"
-      },
-      {
-        "file": "dist/apps/web/.nx-helpers/compiled.js",
-        "hash": "10475717735555826831"
-      },
-      {
-        "file": "dist/apps/web/next.config.js",
-        "hash": "9562931367857950475"
-      },
-      {
-        "file": "dist/apps/web/.next/images-manifest.json",
-        "hash": "4163893158799225096"
-      },
-      {
-        "file": "vercel.json",
-        "hash": "7262408195425711569"
-      },
-      {
-        "file": "dist/apps/web/.next/server/server-reference-manifest.js",
-        "hash": "17886416551195172472"
-      },
-      {
-        "file": "dist/apps/web/.next/cache/.previewinfo",
-        "hash": "4641551355853478826"
-      },
-      {
-        "file": "ACCESSIBILITY.md",
-        "hash": "12617871960765255127"
-      },
-      {
-        "file": "dist/apps/web/.next/next-server.js.nft.json",
-        "hash": "11457311179441620443"
-      },
-      {
-        "file": "dist/apps/web/.next/types/cache-life.d.ts",
-        "hash": "12858368115349027927"
-      },
-      {
-        "file": "dist/apps/web/.next/server/app/robots.txt.meta",
-        "hash": "3051509656048570201"
-      },
-      {
-        "file": "dist/apps/web/.next/types/package.json",
-        "hash": "6094546126370684104"
-      },
-      {
-        "file": "dist/apps/web/.next/server/app/favicon.ico.body",
-        "hash": "9157999678830540297"
-      },
-      {
-        "file": "dist/apps/web/.next/cache/webpack/edge-server-production/0.pack",
-        "hash": "471599872138982288"
-      },
-      {
-        "file": "dist/apps/web/.next/server/app/profile/page.js.nft.json",
-        "hash": "6145915859688995716"
-      },
-      {
-        "file": "nx.json",
-        "hash": "13443843995675476657"
-      },
-      {
-        "file": "dist/libs/domain/index.cjs",
-        "hash": "15059890710194246290"
-      },
-      {
-        "file": "dist/apps/web/public/assets/pineapple.jpeg",
-        "hash": "7102211998924465018"
-      },
-      {
-        "file": "dist/apps/web/.next/next-minimal-server.js.nft.json",
-        "hash": "17868500345217772118"
-      },
-      {
-        "file": "dist/apps/web/.next/static/chunks/585-946ef2a911bb0129.js",
-        "hash": "9628685628064299088"
-      },
-      {
-        "file": "dist/apps/web/.next/static/chunks/app/cart/error-206d5e17e7e648f8.js",
-        "hash": "2188888483939257831"
-      },
-      {
-        "file": "dist/apps/web/.next/cache/webpack/edge-server-production/index.pack",
-        "hash": "16674248885193631219"
-      },
-      {
-        "file": "dist/apps/web/.next/server/app/products/page_client-reference-manifest.js",
-        "hash": "2707603131457950221"
-      },
-      {
-        "file": "dist/apps/web/.next/static/chunks/220-7efa20c0234dbec6.js",
-        "hash": "10470128747917694120"
-      },
-      {
-        "file": "dist/apps/web/.next/types/app/api/products/route.ts",
-        "hash": "18199075785312413417"
-      },
-      {
-        "file": "dist/apps/web/.next/server/pages-manifest.json",
-        "hash": "13198325409882448453"
-      },
-      {
-        "file": "dist/apps/web/.next/server/pages/500.html",
-        "hash": "7032629265708848587"
-      },
-      {
-        "file": "dist/apps/web/.next/static/chunks/app/api/cart/route-caae2dfca53830c8.js",
-        "hash": "4720166682659595568"
-      },
-      {
-        "file": "dist/apps/web/.next/server/chunks/19.js",
-        "hash": "17199416657145373198"
-      },
-      {
-        "file": "dist/apps/web/public/assets/apple.jpeg",
-        "hash": "8559578126533656843"
-      },
-      {
-        "file": "dist/apps/web/.next/server/app/favicon.ico/route.js.nft.json",
-        "hash": "3413742254862184822"
-      },
-      {
-        "file": "dist/apps/web/.next/static/chunks/977-cfffa92a187c441a.js",
-        "hash": "10153846501784433973"
-      },
-      {
-        "file": "dist/apps/web/.next/app-path-routes-manifest.json",
-        "hash": "17151273377655065480"
-      },
-      {
-        "file": "dist/apps/web/.next/server/app/api/suggestions/route_client-reference-manifest.js",
-        "hash": "14199987072281275194"
-      },
-      {
-        "file": "dist/apps/web/.next/server/app/page.js",
-        "hash": "612299402561890861"
+        "file": "dist/apps/web/.next/static/css/8bc4c49b205b5970.css",
+        "hash": "1663257566340035408"
       },
       {
         "file": "package.json",
         "hash": "9464716811815943801"
       },
       {
-        "file": "dist/apps/web/.next/static/chunks/app/page-c708692aaa803ffb.js",
-        "hash": "5131476676063234611"
+        "file": "dist/apps/web/public/assets/apple.jpeg",
+        "hash": "8559578126533656843"
       },
       {
-        "file": "dist/apps/web/.next/static/media/569ce4b8f30dc480-s.p.woff2",
-        "hash": "16363182848401059423"
+        "file": "dist/libs/domain/index.js",
+        "hash": "12675923765968697235"
       },
       {
-        "file": "jest.config.js",
-        "hash": "15430466812816619263"
+        "file": "dist/apps/web/.next/server/next-font-manifest.js",
+        "hash": "2441501734314723431"
       },
       {
-        "file": "dist/libs/domain/package.json",
-        "hash": "661432247059328540"
+        "file": "README.md",
+        "hash": "3685879192013226326"
+      },
+      {
+        "file": "dist/apps/web/.next/server/app/favicon.ico.body",
+        "hash": "9157999678830540297"
+      },
+      {
+        "file": "dist/apps/web/.next/static/chunks/app/api/cart/route-caae2dfca53830c8.js",
+        "hash": "4720166682659595568"
+      },
+      {
+        "file": "dist/apps/web/.next/server/app/cart/page.js.nft.json",
+        "hash": "6145915859688995716"
+      },
+      {
+        "file": "jest.config.json",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "dist/apps/web/.next/server/chunks/129.js",
+        "hash": "9009426996720652600"
       },
       {
         "file": "dist/libs/hooks/package.json",
         "hash": "6271424348429957890"
       },
       {
-        "file": "dist/apps/web/.next/static/Bezjpbh8CIwxv0D5wt5Fo/_ssgManifest.js",
-        "hash": "2285259522902979167"
+        "file": "dist/apps/web/.next/static/media/747892c23ea88013-s.woff2",
+        "hash": "2484364382134452397"
+      },
+      {
+        "file": "dist/apps/web/.next/server/app/api/cart/remove/route_client-reference-manifest.js",
+        "hash": "16690831464054357035"
+      },
+      {
+        "file": "dist/apps/web/.next/required-server-files.json",
+        "hash": "6584290415178048544"
+      },
+      {
+        "file": "dist/apps/web/.next/react-loadable-manifest.json",
+        "hash": "1389868326933519382"
+      },
+      {
+        "file": "dist/libs/infrastructure/index.cjs",
+        "hash": "16836753864522928323"
+      },
+      {
+        "file": "dist/apps/web/.next/static/chunks/534-a7d84cb421eeba16.js",
+        "hash": "14902625132522715845"
+      },
+      {
+        "file": "dist/apps/web/.next/static/media/93f479601ee12b01-s.p.woff2",
+        "hash": "12815628345386823549"
       },
       {
         "file": "dist/apps/web/public/window.svg",
         "hash": "16677869292061012332"
       },
       {
-        "file": "mock-server/package.json",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": "dist/apps/web/.next/static/chunks/app/api/products/route-caae2dfca53830c8.js",
-        "hash": "4720166682659595568"
-      },
-      {
-        "file": "dist/apps/web/.next/types/app/api/user/password/route.ts",
-        "hash": "13921437975754933706"
-      },
-      {
-        "file": "dist/apps/web/.next/server/app/robots.txt/route.js.nft.json",
-        "hash": "6382206781370287391"
-      },
-      {
-        "file": "dist/apps/web/.next/server/app/sitemap.xml/route.js",
-        "hash": "16635552413040899845"
-      },
-      {
-        "file": "dist/apps/web/.next/types/app/api/suggestions/route.ts",
-        "hash": "3740502856333990306"
-      },
-      {
-        "file": "dist/apps/web/.next/server/app/sitemap.xml/route.js.nft.json",
-        "hash": "6382206781370287391"
-      },
-      {
-        "file": "dist/apps/web/.next/static/chunks/app/layout-f34055fa5c29cf6a.js",
-        "hash": "3944465914181115745"
-      },
-      {
-        "file": "dist/apps/web/.next/static/chunks/webpack-21e4c5a828102bc7.js",
-        "hash": "2773813597730256388"
-      },
-      {
-        "file": "dist/libs/ui-components/index.cjs",
-        "hash": "7553804209312284891"
-      },
-      {
-        "file": "dist/apps/web/.next/static/chunks/app/api/products/[id]/route-caae2dfca53830c8.js",
-        "hash": "4720166682659595568"
-      },
-      {
-        "file": "dist/apps/web/.next/server/middleware-react-loadable-manifest.js",
-        "hash": "13961083300434990301"
-      },
-      {
-        "file": "dist/apps/web/public/assets/banana.jpeg",
-        "hash": "6836690818160833984"
-      },
-      {
-        "file": "postcss.config.mjs",
-        "hash": "535692822154927684"
-      },
-      {
-        "file": "package-lock.json",
-        "hash": "15067170660233783304"
-      },
-      {
-        "file": "dist/apps/web/.next/static/chunks/app/robots.txt/route-caae2dfca53830c8.js",
-        "hash": "4720166682659595568"
-      },
-      {
-        "file": "dist/apps/web/.next/routes-manifest.json",
-        "hash": "8076247570702628515"
-      },
-      {
-        "file": "dist/apps/web/.next/server/app/sitemap.xml/route_client-reference-manifest.js",
-        "hash": "2217208306401775625"
-      },
-      {
-        "file": "dist/apps/web/.next/static/chunks/app/profile/page-74c04d9ac8c824a5.js",
-        "hash": "15730253585158925756"
-      },
-      {
-        "file": "dist/apps/web/.next/server/pages/_document.js.nft.json",
-        "hash": "2608592206592714954"
-      },
-      {
-        "file": "dist/apps/web/.next/static/chunks/app/api/user/password/route-caae2dfca53830c8.js",
-        "hash": "4720166682659595568"
-      },
-      {
-        "file": "dist/apps/web/.nx-helpers/compose-plugins.js",
-        "hash": "530203344399478070"
-      },
-      {
-        "file": "dist/apps/web/.next/server/app/api/cart/route_client-reference-manifest.js",
-        "hash": "8695779246546701751"
-      },
-      {
-        "file": "dist/apps/web/.next/server/app/cart/page_client-reference-manifest.js",
-        "hash": "16064824116517945618"
-      },
-      {
-        "file": "dist/apps/web/.next/static/chunks/pages/_error-9bf3255132f409d8.js",
-        "hash": "7186489229171642779"
-      },
-      {
-        "file": "dist/apps/web/.next/server/app/robots.txt.body",
-        "hash": "5059141349280819414"
-      },
-      {
-        "file": "dist/apps/web/.next/server/app/api/products/[id]/route.js.nft.json",
-        "hash": "1885237003711011892"
-      },
-      {
-        "file": "eslint.config.mjs",
-        "hash": "11349616980964601162"
-      },
-      {
-        "file": "pnpm-lock.yaml",
-        "hash": "17154856065699165583"
-      },
-      {
-        "file": "dist/apps/web/.next/static/chunks/app/products/error-b301cc99f6c2caef.js",
-        "hash": "3098578546144209927"
-      },
-      {
-        "file": "dist/apps/web/.next/cache/webpack/server-production/index.pack",
-        "hash": "10398347383589774199"
-      },
-      {
-        "file": "dist/apps/web/public/globe.svg",
-        "hash": "9134466864871335697"
-      },
-      {
-        "file": "dist/apps/web/.next/cache/.rscinfo",
-        "hash": "8303209641299990681"
-      },
-      {
-        "file": "dist/apps/web/.next/types/app/api/cart/remove/route.ts",
-        "hash": "13458010499545364686"
-      },
-      {
-        "file": "dist/apps/web/.next/static/chunks/main-app-053505da651d89be.js",
-        "hash": "10560458185124055503"
-      },
-      {
-        "file": "dist/apps/web/.next/static/chunks/399-2a9623662244e3b6.js",
-        "hash": "5408469628455667144"
-      },
-      {
-        "file": "dist/apps/web/.next/server/pages/_app.js.nft.json",
-        "hash": "11832150321246900909"
-      },
-      {
-        "file": "dist/apps/web/public/assets/orange.jpeg",
-        "hash": "18388923104794855010"
-      },
-      {
-        "file": "dist/apps/web/.next/app-build-manifest.json",
-        "hash": "2641991541894547395"
+        "file": "dist/apps/web/.next/server/app/profile/page.js",
+        "hash": "4915685853502354452"
       },
       {
         "file": "dist/apps/web/.next/server/chunks/106.js",
         "hash": "14677775782043936929"
       },
       {
-        "file": "dist/apps/web/.next/server/app/favicon.ico/route.js",
-        "hash": "3696201555940244853"
+        "file": "dist/apps/web/.next/static/chunks/polyfills-42372ed130431b0a.js",
+        "hash": "8152964857117933876"
+      },
+      {
+        "file": "dist/apps/web/.next/server/app/api/products/route.js",
+        "hash": "14239997455324968098"
+      },
+      {
+        "file": "dist/apps/web/.next/server/pages/_document.js",
+        "hash": "12736258858801573410"
+      },
+      {
+        "file": "dist/apps/web/.next/static/chunks/app/page-c708692aaa803ffb.js",
+        "hash": "5131476676063234611"
+      },
+      {
+        "file": "dist/apps/web/.next/server/app/api/user/password/route.js.nft.json",
+        "hash": "1885237003711011892"
+      },
+      {
+        "file": "dist/apps/web/.next/static/chunks/app/_not-found/page-caae2dfca53830c8.js",
+        "hash": "4720166682659595568"
+      },
+      {
+        "file": "dist/apps/web/.next/types/app/profile/page.ts",
+        "hash": "16290513957653254190"
+      },
+      {
+        "file": "ACCESSIBILITY.md",
+        "hash": "12617871960765255127"
+      },
+      {
+        "file": "dist/apps/web/.next/server/app/api/products/route.js.nft.json",
+        "hash": "15301577969621439375"
+      },
+      {
+        "file": "dist/apps/web/.next/server/app/api/products/[id]/route.js",
+        "hash": "1479982675074738778"
+      },
+      {
+        "file": "dist/apps/web/.next/server/app/sitemap.xml.meta",
+        "hash": "11276033102146525411"
+      },
+      {
+        "file": "tsconfig.json",
+        "hash": "14398937952312504061"
+      },
+      {
+        "file": "dist/apps/web/.next/types/app/cart/page.ts",
+        "hash": "1364008282566033511"
+      },
+      {
+        "file": "dist/apps/web/.next/static/chunks/711-550ea40444f05021.js",
+        "hash": "12777689943449388402"
+      },
+      {
+        "file": "dist/apps/web/.next/server/app/sitemap.xml/route.js",
+        "hash": "16635552413040899845"
+      },
+      {
+        "file": "dist/apps/web/.next/static/chunks/app/api/products/[id]/route-caae2dfca53830c8.js",
+        "hash": "4720166682659595568"
       },
       {
         "file": "dist/apps/web/.next/static/chunks/app/api/suggestions/route-caae2dfca53830c8.js",
         "hash": "4720166682659595568"
       },
       {
-        "file": "dist/apps/web/.next/server/app/api/user/password/route_client-reference-manifest.js",
-        "hash": "1656890074566006749"
+        "file": "dist/libs/infrastructure/index.js",
+        "hash": "9890080639671047450"
+      },
+      {
+        "file": "dist/apps/web/.next/types/cache-life.d.ts",
+        "hash": "12858368115349027927"
+      },
+      {
+        "file": "dist/apps/web/.next/server/webpack-runtime.js",
+        "hash": "11516420547934829449"
+      },
+      {
+        "file": "dist/apps/web/.next/app-path-routes-manifest.json",
+        "hash": "17151273377655065480"
+      },
+      {
+        "file": "dist/apps/web/.next/types/app/api/user/password/route.ts",
+        "hash": "13921437975754933706"
+      },
+      {
+        "file": "DEPLOYMENT.md",
+        "hash": "6492959827566117342"
+      },
+      {
+        "file": ".github/workflows/deploy.yml.disabled",
+        "hash": "17857571901918968700"
+      },
+      {
+        "file": "dist/apps/web/.next/server/app/api/cart/route_client-reference-manifest.js",
+        "hash": "8695779246546701751"
+      },
+      {
+        "file": "nx.json",
+        "hash": "13443843995675476657"
+      },
+      {
+        "file": "dist/apps/web/.next/server/app/_not-found/page.js",
+        "hash": "4022935346967370989"
+      },
+      {
+        "file": "dist/apps/web/.next/images-manifest.json",
+        "hash": "4163893158799225096"
+      },
+      {
+        "file": "dist/apps/web/.next/server/pages/404.html",
+        "hash": "7244317844207264439"
+      },
+      {
+        "file": "dist/apps/web/.next/static/chunks/app/cart/error-206d5e17e7e648f8.js",
+        "hash": "2188888483939257831"
+      },
+      {
+        "file": "dist/apps/web/.next/server/app/robots.txt/route.js.nft.json",
+        "hash": "6382206781370287391"
       },
       {
         "file": "dist/apps/web/.next/server/chunks/368.js",
@@ -515,324 +259,580 @@
         "hash": "5128539696952868096"
       },
       {
-        "file": "README.md",
-        "hash": "3685879192013226326"
+        "file": "vitest.config.ts",
+        "hash": "2227125307202795161"
       },
       {
-        "file": ".github/workflows/deploy.yml.disabled",
-        "hash": "17857571901918968700"
+        "file": "dist/apps/web/.next/server/app/robots.txt.body",
+        "hash": "5059141349280819414"
       },
       {
-        "file": "dist/apps/web/public/vercel.svg",
-        "hash": "3007623926711696394"
+        "file": "dist/apps/web/.next/server/app/robots.txt.meta",
+        "hash": "3051509656048570201"
       },
       {
-        "file": "dist/apps/web/.next/static/chunks/app/error-40691f57d6529dde.js",
-        "hash": "495777367117374225"
+        "file": "dist/apps/web/.next/cache/webpack/edge-server-production/0.pack",
+        "hash": "471599872138982288"
       },
       {
-        "file": "dist/apps/web/.next/server/app/products/page.js.nft.json",
-        "hash": "6145915859688995716"
+        "file": "dist/apps/web/.next/routes-manifest.json",
+        "hash": "8076247570702628515"
       },
       {
-        "file": "dist/apps/web/public/file.svg",
-        "hash": "15617830351863523835"
+        "file": "dist/apps/web/.next/server/middleware-react-loadable-manifest.js",
+        "hash": "13961083300434990301"
       },
       {
-        "file": ".github/workflows/deploy-alt.yml",
-        "hash": "15866166327424027884"
-      },
-      {
-        "file": "dist/apps/web/.next/server/pages/_app.js",
-        "hash": "10830025355555460619"
-      },
-      {
-        "file": "dist/apps/web/.next/server/app/api/products/route.js.nft.json",
-        "hash": "15301577969621439375"
-      },
-      {
-        "file": "dist/apps/web/.next/server/app/api/cart/remove/route.js",
-        "hash": "14920620299461990914"
-      },
-      {
-        "file": "dist/apps/web/.next/BUILD_ID",
-        "hash": "4122459380893803345"
-      },
-      {
-        "file": "dist/apps/web/public/assets/lime.jpeg",
-        "hash": "2330862799645000227"
-      },
-      {
-        "file": "dist/apps/web/.next/server/app/api/cart/remove/route_client-reference-manifest.js",
-        "hash": "16690831464054357035"
-      },
-      {
-        "file": ".gitignore",
-        "hash": "1867017717006394117"
-      },
-      {
-        "file": "dist/apps/web/.next/static/chunks/pages/_app-a813e0cb23a44b52.js",
-        "hash": "15640558468634918217"
-      },
-      {
-        "file": "dist/apps/web/.next/server/app/api/suggestions/route.js",
-        "hash": "5892576722409291938"
-      },
-      {
-        "file": "dist/apps/web/.next/server/app/api/suggestions/route.js.nft.json",
-        "hash": "15301577969621439375"
-      },
-      {
-        "file": "dist/apps/web/.next/server/app/api/products/[id]/route.js",
-        "hash": "1479982675074738778"
-      },
-      {
-        "file": "dist/apps/web/.next/server/app/api/user/password/route.js.nft.json",
-        "hash": "1885237003711011892"
-      },
-      {
-        "file": "dist/apps/web/.next/server/app/api/cart/remove/route.js.nft.json",
-        "hash": "1885237003711011892"
-      },
-      {
-        "file": "dist/apps/web/.next/server/app/robots.txt/route.js",
-        "hash": "15852844545603329976"
-      },
-      {
-        "file": "dist/apps/web/.next/server/pages/_document.js",
-        "hash": "12736258858801573410"
-      },
-      {
-        "file": "dist/apps/web/.next/static/chunks/polyfills-42372ed130431b0a.js",
-        "hash": "8152964857117933876"
-      },
-      {
-        "file": "dist/apps/web/.next/required-server-files.json",
-        "hash": "6584290415178048544"
-      },
-      {
-        "file": "dist/apps/web/.next/static/media/8d697b304b401681-s.woff2",
-        "hash": "16898193935657147443"
-      },
-      {
-        "file": "dist/apps/web/.next/types/app/page.ts",
-        "hash": "14047553309494209797"
-      },
-      {
-        "file": "mock-server/server.js",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": "dist/apps/web/.next/server/app/cart/page.js",
-        "hash": "13499104913132045056"
-      },
-      {
-        "file": "dist/apps/web/.next/server/app/api/cart/route.js",
-        "hash": "15453075998647833405"
-      },
-      {
-        "file": "dist/apps/web/.next/server/app/cart/page.js.nft.json",
-        "hash": "6145915859688995716"
+        "file": "dist/apps/web/.next/server/app/favicon.ico/route.js",
+        "hash": "3696201555940244853"
       },
       {
         "file": "dist/apps/web/.next/server/app/_not-found/page_client-reference-manifest.js",
         "hash": "13795702103814614063"
       },
       {
-        "file": "dist/apps/web/.next/server/app/products/page.js",
-        "hash": "15859712501792244685"
-      },
-      {
-        "file": "dist/apps/web/.next/server/app/sitemap.xml.meta",
-        "hash": "11276033102146525411"
-      },
-      {
-        "file": "dist/libs/infrastructure/index.cjs",
-        "hash": "16836753864522928323"
-      },
-      {
-        "file": "dist/apps/web/.next/static/chunks/320-882c71333cac18ce.js",
-        "hash": "9758230849855565630"
-      },
-      {
-        "file": "dist/apps/web/.next/server/app-paths-manifest.json",
-        "hash": "11258939777235384546"
-      },
-      {
-        "file": "dist/apps/web/.next/cache/webpack/client-production/index.pack",
-        "hash": "8145784292464778610"
-      },
-      {
-        "file": "dist/apps/web/.next/cache/webpack/server-production/0.pack",
-        "hash": "7159850346040139479"
-      },
-      {
-        "file": "dist/apps/web/.next/static/chunks/app/sitemap.xml/route-caae2dfca53830c8.js",
-        "hash": "4720166682659595568"
-      },
-      {
-        "file": "dist/apps/web/.next/static/chunks/711-550ea40444f05021.js",
-        "hash": "12777689943449388402"
-      },
-      {
-        "file": "dist/apps/web/.next/static/chunks/app/not-found-e01719cc4b0ff3f0.js",
-        "hash": "17788337956131102051"
-      },
-      {
-        "file": "dist/apps/web/.next/types/app/products/page.ts",
-        "hash": "7732500062776561838"
-      },
-      {
-        "file": "tsconfig.json",
-        "hash": "14398937952312504061"
-      },
-      {
         "file": "dist/apps/web/.next/server/app/api/products/route_client-reference-manifest.js",
         "hash": "2281051618320699608"
+      },
+      {
+        "file": "dist/libs/ui-components/index.cjs",
+        "hash": "7553804209312284891"
+      },
+      {
+        "file": "dist/apps/web/public/assets/orange.jpeg",
+        "hash": "18388923104794855010"
       },
       {
         "file": "dist/apps/web/.next/server/app/page.js.nft.json",
         "hash": "11385819107647976441"
       },
       {
-        "file": "dist/libs/domain/index.js",
-        "hash": "12675923765968697235"
-      },
-      {
-        "file": "dist/apps/web/.next/static/chunks/981-f2bf1a6efeb08eff.js",
-        "hash": "2227857844802487570"
-      },
-      {
-        "file": "dist/apps/web/.next/server/webpack-runtime.js",
-        "hash": "11516420547934829449"
+        "file": "dist/apps/web/.next/server/app/profile/page.js.nft.json",
+        "hash": "6145915859688995716"
       },
       {
         "file": "dist/apps/web/.next/server/app/api/products/[id]/route_client-reference-manifest.js",
         "hash": "5241958849665756778"
       },
       {
-        "file": "dist/libs/hooks/index.js",
-        "hash": "8342666657336694893"
-      },
-      {
-        "file": "dist/apps/web/.next/prerender-manifest.json",
-        "hash": "4716537999730087432"
-      },
-      {
         "file": "dist/apps/web/.next/trace",
         "hash": "2533722652505832657"
       },
       {
-        "file": "dist/apps/web/.next/diagnostics/build-diagnostics.json",
-        "hash": "14616169667565587216"
-      },
-      {
-        "file": "dist/apps/web/.next/static/chunks/534-a7d84cb421eeba16.js",
-        "hash": "14902625132522715845"
-      },
-      {
-        "file": "dist/apps/web/.next/static/css/8bc4c49b205b5970.css",
-        "hash": "1663257566340035408"
-      },
-      {
-        "file": "jest.config.json",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": "dist/apps/web/.next/static/chunks/app/products/page-de287e742bf275e4.js",
-        "hash": "1770690451430334272"
-      },
-      {
-        "file": "dist/apps/web/.next/server/app/_not-found/page.js",
-        "hash": "4022935346967370989"
+        "file": "dist/apps/web/.next/server/app/products/page_client-reference-manifest.js",
+        "hash": "2707603131457950221"
       },
       {
         "file": "dist/apps/web/.next/static/media/9610d9e46709d722-s.woff2",
         "hash": "5241196410900714304"
       },
       {
-        "file": "dist/apps/web/.next/static/chunks/app/api/cart/remove/route-caae2dfca53830c8.js",
-        "hash": "4720166682659595568"
-      },
-      {
-        "file": "dist/apps/web/.next/server/app/api/products/route.js",
-        "hash": "14239997455324968098"
-      },
-      {
         "file": "dist/apps/web/.next/static/chunks/main-877e6cfe0af9ce3e.js",
         "hash": "7079867645284052245"
       },
       {
-        "file": "dist/apps/web/.next/server/app/api/cart/route.js.nft.json",
-        "hash": "15301577969621439375"
-      },
-      {
-        "file": "DEPLOYMENT.md",
-        "hash": "6492959827566117342"
-      },
-      {
-        "file": "dist/apps/web/package.json",
-        "hash": "12066107997604615092"
-      },
-      {
-        "file": "dist/libs/hooks/index.cjs",
-        "hash": "14687408352344779117"
-      },
-      {
-        "file": "dist/apps/web/.next/static/chunks/app/cart/page-9744d1cb9de27676.js",
-        "hash": "13362066581963443300"
-      },
-      {
-        "file": "dist/apps/web/.next/server/app/api/user/password/route.js",
-        "hash": "17874262595307021141"
-      },
-      {
-        "file": "dist/apps/web/.next/server/interception-route-rewrite-manifest.js",
-        "hash": "10135913824388381780"
-      },
-      {
-        "file": "dist/apps/web/.next/server/app/favicon.ico.meta",
-        "hash": "10145447482461182045"
-      },
-      {
-        "file": "dist/apps/web/.next/static/chunks/973-4d9950d8e4a0e95f.js",
-        "hash": "3541137968992075696"
+        "file": "dist/apps/web/.next/types/app/products/page.ts",
+        "hash": "7732500062776561838"
       },
       {
         "file": "dist/apps/web/.next/export-marker.json",
         "hash": "18178783900034545031"
       },
       {
-        "file": "dist/apps/web/.next/types/app/api/products/[id]/route.ts",
-        "hash": "17966502423382009466"
+        "file": "dist/apps/web/.next/types/app/api/cart/remove/route.ts",
+        "hash": "13458010499545364686"
       },
       {
-        "file": "dist/apps/web/.next/package.json",
-        "hash": "11338307439248427064"
+        "file": "dist/apps/web/.next/prerender-manifest.json",
+        "hash": "4716537999730087432"
       },
       {
-        "file": "dist/apps/web/.nx-helpers/with-nx.js",
-        "hash": "17654419731757580668"
+        "file": "dist/apps/web/.next/cache/.previewinfo",
+        "hash": "4641551355853478826"
       },
       {
-        "file": "test-app.sh",
-        "hash": "5352420615130746635"
+        "file": "dist/apps/web/public/next.svg",
+        "hash": "8300767200008744458"
+      },
+      {
+        "file": "dist/apps/web/.next/static/chunks/399-2a9623662244e3b6.js",
+        "hash": "5408469628455667144"
       },
       {
         "file": "dist/apps/web/.next/server/chunks/351.js",
         "hash": "9430899218689247583"
       },
       {
+        "file": "dist/apps/web/.next/static/chunks/framework-71fb8592b151a85d.js",
+        "hash": "765805994737164561"
+      },
+      {
+        "file": "dist/apps/web/.next/types/app/api/products/[id]/route.ts",
+        "hash": "17966502423382009466"
+      },
+      {
+        "file": "dist/apps/web/public/globe.svg",
+        "hash": "9134466864871335697"
+      },
+      {
+        "file": "dist/apps/web/public/assets/banana.jpeg",
+        "hash": "6836690818160833984"
+      },
+      {
+        "file": "dist/apps/web/.next/cache/webpack/client-production/index.pack",
+        "hash": "8145784292464778610"
+      },
+      {
+        "file": "dist/apps/web/.next/static/chunks/973-4d9950d8e4a0e95f.js",
+        "hash": "3541137968992075696"
+      },
+      {
+        "file": "dist/apps/web/.next/server/pages-manifest.json",
+        "hash": "13198325409882448453"
+      },
+      {
+        "file": "dist/apps/web/.next/server/app/api/cart/route.js",
+        "hash": "15453075998647833405"
+      },
+      {
+        "file": "dist/apps/web/.next/static/chunks/pages/_error-9bf3255132f409d8.js",
+        "hash": "7186489229171642779"
+      },
+      {
+        "file": "mock-server/server.js",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "dist/apps/web/.next/static/chunks/main-app-053505da651d89be.js",
+        "hash": "10560458185124055503"
+      },
+      {
+        "file": "dist/apps/web/.next/server/app/page.js",
+        "hash": "612299402561890861"
+      },
+      {
+        "file": "dist/apps/web/.next/static/media/ba015fad6dcf6784-s.woff2",
+        "hash": "1725881887190334938"
+      },
+      {
+        "file": "dist/apps/web/.next/cache/.rscinfo",
+        "hash": "8303209641299990681"
+      },
+      {
+        "file": "dist/apps/web/.next/server/app-paths-manifest.json",
+        "hash": "11258939777235384546"
+      },
+      {
+        "file": "dist/apps/web/.next/types/package.json",
+        "hash": "6094546126370684104"
+      },
+      {
+        "file": "dist/apps/web/.next/server/pages/_app.js",
+        "hash": "10830025355555460619"
+      },
+      {
+        "file": "dist/apps/web/.next/static/Bezjpbh8CIwxv0D5wt5Fo/_buildManifest.js",
+        "hash": "11708650850206136742"
+      },
+      {
+        "file": "dist/apps/web/.next/server/app/_not-found/page.js.nft.json",
+        "hash": "13405253755564979118"
+      },
+      {
+        "file": "dist/apps/web/.next/next-server.js.nft.json",
+        "hash": "11457311179441620443"
+      },
+      {
+        "file": "dist/apps/web/.next/server/chunks/19.js",
+        "hash": "17199416657145373198"
+      },
+      {
+        "file": "dist/apps/web/.next/server/app/api/cart/remove/route.js.nft.json",
+        "hash": "1885237003711011892"
+      },
+      {
+        "file": "dist/apps/web/.next/next-minimal-server.js.nft.json",
+        "hash": "17868500345217772118"
+      },
+      {
+        "file": "dist/apps/web/.next/server/interception-route-rewrite-manifest.js",
+        "hash": "10135913824388381780"
+      },
+      {
+        "file": "frutty.gif",
+        "hash": "12275096884789427673"
+      },
+      {
+        "file": "dist/libs/ui-components/index.js",
+        "hash": "383674024324477551"
+      },
+      {
+        "file": "dist/libs/domain/package.json",
+        "hash": "661432247059328540"
+      },
+      {
+        "file": "dist/apps/web/.next/server/app/api/user/password/route.js",
+        "hash": "17874262595307021141"
+      },
+      {
         "file": "dist/apps/web/.next/server/middleware-build-manifest.js",
         "hash": "10789963780390187580"
+      },
+      {
+        "file": "dist/apps/web/.next/cache/webpack/server-production/index.pack",
+        "hash": "10398347383589774199"
+      },
+      {
+        "file": "dist/apps/web/.next/diagnostics/build-diagnostics.json",
+        "hash": "14616169667565587216"
+      },
+      {
+        "file": "dist/apps/web/.next/server/app/products/page.js",
+        "hash": "15859712501792244685"
+      },
+      {
+        "file": "dist/apps/web/.next/types/app/api/cart/route.ts",
+        "hash": "7246879957565546896"
+      },
+      {
+        "file": "dist/libs/domain/index.cjs",
+        "hash": "15059890710194246290"
+      },
+      {
+        "file": "dist/apps/web/.next/static/chunks/app/products/error-b301cc99f6c2caef.js",
+        "hash": "3098578546144209927"
+      },
+      {
+        "file": "dist/apps/web/.next/server/app/favicon.ico.meta",
+        "hash": "10145447482461182045"
+      },
+      {
+        "file": "dist/apps/web/.next/server/app/robots.txt/route_client-reference-manifest.js",
+        "hash": "7480009685803014871"
+      },
+      {
+        "file": "dist/apps/web/public/assets/pineapple.jpeg",
+        "hash": "7102211998924465018"
+      },
+      {
+        "file": "dist/apps/web/public/assets/lime.jpeg",
+        "hash": "2330862799645000227"
+      },
+      {
+        "file": "dist/libs/ui-components/package.json",
+        "hash": "10525126000894787081"
+      },
+      {
+        "file": "jest.config.js",
+        "hash": "15430466812816619263"
+      },
+      {
+        "file": "dist/apps/web/.next/server/app/api/cart/remove/route.js",
+        "hash": "14920620299461990914"
+      },
+      {
+        "file": "dist/apps/web/.next/static/chunks/app/products/page-de287e742bf275e4.js",
+        "hash": "1770690451430334272"
+      },
+      {
+        "file": "dist/apps/web/public/file.svg",
+        "hash": "15617830351863523835"
+      },
+      {
+        "file": "dist/apps/web/.next/server/app/api/cart/route.js.nft.json",
+        "hash": "15301577969621439375"
+      },
+      {
+        "file": "dist/apps/web/public/manifest.json",
+        "hash": "6547894590055749529"
+      },
+      {
+        "file": "dist/apps/web/.next/static/chunks/981-f2bf1a6efeb08eff.js",
+        "hash": "2227857844802487570"
+      },
+      {
+        "file": "vercel.json",
+        "hash": "5441157363119273612"
+      },
+      {
+        "file": "dist/apps/web/.next/types/app/page.ts",
+        "hash": "14047553309494209797"
       },
       {
         "file": "dist/apps/web/.next/server/chunks/14.js",
         "hash": "13124010922603280052"
       },
       {
-        "file": "dist/apps/web/.next/types/app/cart/page.ts",
-        "hash": "1364008282566033511"
+        "file": "dist/apps/web/.next/server/next-font-manifest.json",
+        "hash": "9932165303186982145"
+      },
+      {
+        "file": "dist/apps/web/.next/static/chunks/977-cfffa92a187c441a.js",
+        "hash": "10153846501784433973"
+      },
+      {
+        "file": "dist/apps/web/.next/server/pages/_error.js",
+        "hash": "6502712470589822895"
+      },
+      {
+        "file": "pnpm-lock.yaml",
+        "hash": "17154856065699165583"
+      },
+      {
+        "file": "dist/apps/web/.next/static/media/569ce4b8f30dc480-s.p.woff2",
+        "hash": "16363182848401059423"
+      },
+      {
+        "file": "dist/apps/web/.next/static/chunks/app/profile/page-74c04d9ac8c824a5.js",
+        "hash": "15730253585158925756"
+      },
+      {
+        "file": "dist/apps/web/next.config.js",
+        "hash": "9562931367857950475"
+      },
+      {
+        "file": "dist/apps/web/.next/server/pages/_document.js.nft.json",
+        "hash": "2608592206592714954"
+      },
+      {
+        "file": ".github/workflows/deploy-alt.yml",
+        "hash": "15866166327424027884"
+      },
+      {
+        "file": "dist/apps/web/.next/BUILD_ID",
+        "hash": "4122459380893803345"
+      },
+      {
+        "file": "dist/apps/web/.next/static/chunks/pages/_app-a813e0cb23a44b52.js",
+        "hash": "15640558468634918217"
+      },
+      {
+        "file": "dist/apps/web/.next/types/app/api/suggestions/route.ts",
+        "hash": "3740502856333990306"
+      },
+      {
+        "file": "dist/libs/infrastructure/package.json",
+        "hash": "9292883001305438367"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "15067170660233783304"
+      },
+      {
+        "file": "dist/apps/web/.next/static/chunks/app/layout-f34055fa5c29cf6a.js",
+        "hash": "3944465914181115745"
+      },
+      {
+        "file": "dist/apps/web/.next/server/app/api/user/password/route_client-reference-manifest.js",
+        "hash": "1656890074566006749"
+      },
+      {
+        "file": "dist/apps/web/.next/static/chunks/320-882c71333cac18ce.js",
+        "hash": "9758230849855565630"
+      },
+      {
+        "file": "dist/apps/web/.next/cache/webpack/server-production/0.pack",
+        "hash": "7159850346040139479"
+      },
+      {
+        "file": "dist/apps/web/.nx-helpers/compiled.js",
+        "hash": "10475717735555826831"
+      },
+      {
+        "file": "dist/apps/web/.next/static/chunks/app/cart/page-9744d1cb9de27676.js",
+        "hash": "13362066581963443300"
+      },
+      {
+        "file": "dist/apps/web/public/vercel.svg",
+        "hash": "3007623926711696394"
+      },
+      {
+        "file": "dist/apps/web/.next/build-manifest.json",
+        "hash": "16078909928464479762"
+      },
+      {
+        "file": "dist/apps/web/.next/cache/webpack/edge-server-production/index.pack",
+        "hash": "16674248885193631219"
+      },
+      {
+        "file": "dist/apps/web/.next/package.json",
+        "hash": "11338307439248427064"
+      },
+      {
+        "file": "dist/apps/web/.next/server/server-reference-manifest.js",
+        "hash": "17886416551195172472"
+      },
+      {
+        "file": "dist/apps/web/.next/types/app/api/products/route.ts",
+        "hash": "18199075785312413417"
+      },
+      {
+        "file": "dist/apps/web/.nx-helpers/compose-plugins.js",
+        "hash": "530203344399478070"
+      },
+      {
+        "file": "dist/apps/web/.next/server/app/api/suggestions/route.js.nft.json",
+        "hash": "15301577969621439375"
+      },
+      {
+        "file": "dist/apps/web/.next/cache/webpack/client-production/0.pack",
+        "hash": "5084574386063790034"
+      },
+      {
+        "file": "dist/apps/web/.next/static/chunks/app/api/products/route-caae2dfca53830c8.js",
+        "hash": "4720166682659595568"
+      },
+      {
+        "file": "dist/apps/web/.next/server/app/robots.txt/route.js",
+        "hash": "15852844545603329976"
+      },
+      {
+        "file": "dist/apps/web/.next/static/chunks/webpack-21e4c5a828102bc7.js",
+        "hash": "2773813597730256388"
+      },
+      {
+        "file": "dist/apps/web/.next/static/chunks/585-946ef2a911bb0129.js",
+        "hash": "9628685628064299088"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "1867017717006394117"
+      },
+      {
+        "file": "dist/apps/web/.next/static/chunks/app/error-40691f57d6529dde.js",
+        "hash": "495777367117374225"
+      },
+      {
+        "file": "dist/apps/web/.next/static/chunks/220-7efa20c0234dbec6.js",
+        "hash": "10470128747917694120"
+      },
+      {
+        "file": "dist/apps/web/.next/static/chunks/app/robots.txt/route-caae2dfca53830c8.js",
+        "hash": "4720166682659595568"
+      },
+      {
+        "file": "dist/apps/web/.next/server/app/favicon.ico/route.js.nft.json",
+        "hash": "3413742254862184822"
+      },
+      {
+        "file": "dist/apps/web/.next/server/app/sitemap.xml/route.js.nft.json",
+        "hash": "6382206781370287391"
+      },
+      {
+        "file": "postcss.config.mjs",
+        "hash": "535692822154927684"
+      },
+      {
+        "file": "dist/apps/web/.next/server/middleware-manifest.json",
+        "hash": "9889576824779923310"
+      },
+      {
+        "file": "mock-server/package.json",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "dist/apps/web/.next/server/app/api/suggestions/route_client-reference-manifest.js",
+        "hash": "14199987072281275194"
+      },
+      {
+        "file": "dist/apps/web/.next/server/app/cart/page_client-reference-manifest.js",
+        "hash": "16064824116517945618"
+      },
+      {
+        "file": "dist/apps/web/.next/server/chunks/472.js",
+        "hash": "4827131070133291817"
+      },
+      {
+        "file": "dist/apps/web/.next/server/app/sitemap.xml/route_client-reference-manifest.js",
+        "hash": "2217208306401775625"
+      },
+      {
+        "file": "dist/apps/web/.next/server/app/profile/page_client-reference-manifest.js",
+        "hash": "9707667122882520917"
+      },
+      {
+        "file": "dist/apps/web/.next/server/server-reference-manifest.json",
+        "hash": "1783532110917280485"
+      },
+      {
+        "file": "dist/apps/web/.next/server/app/api/products/[id]/route.js.nft.json",
+        "hash": "1885237003711011892"
+      },
+      {
+        "file": ".vercelignore",
+        "hash": "13134635047374381888"
+      },
+      {
+        "file": "eslint.config.mjs",
+        "hash": "11349616980964601162"
+      },
+      {
+        "file": "dist/apps/web/.next/server/app/page_client-reference-manifest.js",
+        "hash": "5960276789297624983"
+      },
+      {
+        "file": "dist/apps/web/.next/static/chunks/3da69e0a-f692250034f40d68.js",
+        "hash": "6773529052057715483"
+      },
+      {
+        "file": "dist/apps/web/.next/static/chunks/app/api/user/password/route-caae2dfca53830c8.js",
+        "hash": "4720166682659595568"
+      },
+      {
+        "file": "dist/apps/web/.next/app-build-manifest.json",
+        "hash": "2641991541894547395"
+      },
+      {
+        "file": "dist/apps/web/.next/server/app/products/page.js.nft.json",
+        "hash": "6145915859688995716"
+      },
+      {
+        "file": "dist/apps/web/.next/server/app/api/suggestions/route.js",
+        "hash": "5892576722409291938"
+      },
+      {
+        "file": "dist/apps/web/.next/server/app/cart/page.js",
+        "hash": "13499104913132045056"
+      },
+      {
+        "file": "dist/apps/web/.next/static/chunks/app/sitemap.xml/route-caae2dfca53830c8.js",
+        "hash": "4720166682659595568"
+      },
+      {
+        "file": "dist/apps/web/.next/static/chunks/app/not-found-e01719cc4b0ff3f0.js",
+        "hash": "17788337956131102051"
+      },
+      {
+        "file": "dist/apps/web/.next/static/chunks/app/api/cart/remove/route-caae2dfca53830c8.js",
+        "hash": "4720166682659595568"
+      },
+      {
+        "file": "dist/apps/web/package.json",
+        "hash": "12066107997604615092"
+      },
+      {
+        "file": "test-app.sh",
+        "hash": "5352420615130746635"
+      },
+      {
+        "file": "dist/apps/web/.next/server/pages/_app.js.nft.json",
+        "hash": "11832150321246900909"
+      },
+      {
+        "file": "dist/apps/web/.next/static/Bezjpbh8CIwxv0D5wt5Fo/_ssgManifest.js",
+        "hash": "2285259522902979167"
+      },
+      {
+        "file": "dist/apps/web/.next/static/media/8d697b304b401681-s.woff2",
+        "hash": "16898193935657147443"
+      },
+      {
+        "file": "dist/libs/hooks/index.cjs",
+        "hash": "14687408352344779117"
+      },
+      {
+        "file": "dist/apps/web/.nx-helpers/with-nx.js",
+        "hash": "17654419731757580668"
       }
     ],
     "projectFileMap": {
