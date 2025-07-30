@@ -114,7 +114,7 @@ export async function GET(request: NextRequest) {
                 packageSize: 1,
                 colors: ['green'],
                 description: 'Crispy and sweet Granny Smith apples',
-                image: '/assets/apple-granny-smith.jpeg'
+                image: '/assets/apple.jpeg'
             },
             {
                 id: '2',

@@ -63,49 +63,13 @@
       "id": 2
     },
     {
-      "productId": "3",
-      "productName": "Apple",
-      "price": 1.592,
-      "quantity": 1,
-      "image": "/assets/apple.jpeg",
-      "packageSize": 1,
-      "id": 4
-    },
-    {
-      "productId": "3",
-      "productName": "Apple",
-      "price": 1.592,
-      "quantity": 1,
-      "image": "/assets/apple.jpeg",
-      "packageSize": 1,
-      "id": 5
-    },
-    {
-      "productId": "2",
-      "productName": "Banana",
-      "price": 3.99,
+      "productId": "5",
+      "productName": "Pineapple",
+      "price": 4.99,
       "quantity": 2,
-      "image": "/assets/banana.jpeg",
-      "packageSize": 2,
-      "id": 6
-    },
-    {
-      "productId": "2",
-      "productName": "Banana",
-      "price": 3.99,
-      "quantity": 8,
-      "image": "/assets/banana.jpeg",
-      "packageSize": 2,
-      "id": 7
-    },
-    {
-      "productId": "3",
-      "productName": "Apple",
-      "price": 1.592,
-      "quantity": 1,
-      "image": "/assets/apple.jpeg",
+      "image": "/assets/pineapple.jpeg",
       "packageSize": 1,
-      "id": 8
+      "id": 3
     }
   ]
 }
