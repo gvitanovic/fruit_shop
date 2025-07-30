@@ -1,28 +1,9 @@
 {
-    "version": 2,
-    "name": "fruit-shop",
-    "builds": [
-        {
-            "src": "apps/web/package.json",
-            "use": "@vercel/next",
-            "config": {
-                "distDir": ".next"
-            }
-        }
-    ],
-    "routes": [
-        {
-            "src": "/api/(.*)",
-            "dest": "/api/$1"
-        },
-        {
-            "src": "/(.*)",
-            "dest": "/apps/web/$1"
-        }
-    ],
-    "buildCommand": "pnpm build:libs && pnpm nx build web",
-    "outputDirectory": "apps/web/.next",
-    "installCommand": "pnpm install --frozen-lockfile",
-    "framework": "nextjs",
-    "crons": []
+  "version": 2,
+  "name": "fruit-shop",
+  "buildCommand": "pnpm build:libs && pnpm nx build web",
+  "outputDirectory": "apps/web/.next",
+  "installCommand": "pnpm install --frozen-lockfile",
+  "framework": "nextjs",
+  "rootDirectory": "apps/web"
 }
