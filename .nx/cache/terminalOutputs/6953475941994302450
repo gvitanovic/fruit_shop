@@ -1,8 +1,0 @@
-> nx run domain:lint
-
-
-Linting "domain"...
-Pages directory cannot be found at /Users/gv/Projects/fruit_shop/pages or /Users/gv/Projects/fruit_shop/src/pages. If using a custom path, please configure with the `no-html-link-for-pages` rule in your eslint config file.
-
-✔ All files pass linting
-

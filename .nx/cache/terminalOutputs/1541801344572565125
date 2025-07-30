@@ -1,11 +1,0 @@
-> nx run domain:build
-
-[36mvite v5.4.19 [32mbuilding for production...[36m[39m
-[33m
-[1m(!)[22m outDir [37m[2m/Users/gv/dist/libs/domain[22m[33m is not inside project root and will not be emptied.
-Use --emptyOutDir to override.
-[39m
-[2K[1Gtransforming (1) [2mlibs/domain/src/index.ts[22m[2K[1G[32m✓[39m 6 modules transformed.
-[2K[1Grendering chunks (1)...[2K[1G[2K[1Gcomputing gzip size (0)...[2K[1Gcomputing gzip size (1)...[2K[1G[2m../../dist/libs/domain/[22m[36mindex.mjs  [39m[1m[2m4.05 kB[22m[1m[22m[2m │ gzip: 1.31 kB[22m
-[2K[1Grendering chunks (1)...[2K[1G[2K[1Gcomputing gzip size (1)...[2K[1G[2m../../dist/libs/domain/[22m[36mindex.js  [39m[1m[2m2.88 kB[22m[1m[22m[2m │ gzip: 1.18 kB[22m
-[32m✓ built in 38ms[39m
