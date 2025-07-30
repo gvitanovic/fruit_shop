@@ -1,0 +1,21 @@
+{
+  "run": {
+    "command": "nx run hooks:nx-release-publish",
+    "startTime": "2025-07-30T14:23:24.156Z",
+    "endTime": "2025-07-30T14:23:26.128Z",
+    "inner": false
+  },
+  "tasks": [
+    {
+      "taskId": "domain:nx-release-publish",
+      "target": "nx-release-publish",
+      "projectName": "domain",
+      "hash": "9362267136021059103",
+      "startTime": "2025-07-30T14:23:24.198Z",
+      "endTime": "2025-07-30T14:23:26.126Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 1
+    }
+  ]
+}

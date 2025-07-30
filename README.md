@@ -1,206 +1,375 @@
 ![Watch the demo](frutty.gif)
 
-# Fruit Shop - BFF Architecture
+# Fruit Shop - Nx Monorepo with BFF Architecture
 
-This project implements a Backend for Frontend (BFF) pattern where the Next.js application acts as an intermediary between the frontend and the backend server.
+This project is an enterprise-grade Nx monorepo implementing a Backend for Frontend (BFF) pattern with modular, scalable architecture. The Next.js web application consumes shared libraries for maximum code reuse and maintainability.
 
-## Architecture Overview
+## 🏗️ Monorepo Architecture
+
+```
+fruit_shop/
+├── apps/
+│   ├── server/                 # JSON Server backend
+│   │   ├── db.json            # Database for JSON Server
+│   │   ├── server.js          # Server configuration
+│   │   ├── package.json       # Server package configuration
+│   │   └── project.json       # Nx project configuration
+│   └── web/                   # Next.js application (BFF layer)
+│       ├── app/               # Next.js app router & API routes
+│       ├── config/            # App-specific configuration
+│       ├── public/            # Static assets
+│       └── test/              # App-specific tests
+└── libs/
+    ├── domain/                # Business logic & entities
+    ├── infrastructure/        # API management & HTTP clients
+    ├── hooks/                 # React hooks
+    └── ui-components/         # Shared UI component library
+```
+
+## 🎯 Library Architecture
+
+### @fruit-shop/domain
+**Business Logic & Entities**
+- `entities/` - TypeScript interfaces for core domain objects (Product, Cart, User)
+- `services/` - Business logic and calculations (CartService, ProductService, PasswordService)
+- Zero dependencies - pure TypeScript domain logic
+
+### @fruit-shop/infrastructure  
+**API Management & External Services**
+- `api/` - HTTP clients, repositories, and API management
+- `ApiManager` - Singleton service for API orchestration
+- `AxiosHttpClient` - HTTP client implementation
+- Dependencies: axios, @fruit-shop/domain
+
+### @fruit-shop/hooks
+**React Hooks for State Management** 
+- `useCart` - Cart state management with React Query
+- `useProducts` - Product fetching and filtering
+- `useUser` - User authentication and profile management
+- Dependencies: react, @tanstack/react-query, @fruit-shop/domain, @fruit-shop/infrastructure
+
+### @fruit-shop/ui-components
+**Shared UI Component Library**
+- **Atoms**: Button, Input, Label, Badge, Spinner
+- **Molecules**: Modal, SearchBar, PasswordStrength  
+- **Organisms**: ProductCard, Header, ProductFilters
+- **Templates**: AppLayout
+- **Containers**: ProductsContainer, CartContainer, ProfileContainer
+- Dependencies: react, next, lucide-react, @fruit-shop/domain, @fruit-shop/hooks
+
+## 🚀 BFF Pattern Implementation
 
 ```
 Frontend (React Components)
     ↓
-Infrastructure Layer (ApiManager, Repositories)
+Infrastructure Layer (@fruit-shop/infrastructure)
     ↓
-Next.js API Routes (BFF Layer)
+Next.js API Routes (BFF Layer - apps/web/app/api)
     ↓
-Backend Server (Port 3000)
+Backend Server (apps/server - Port 3002)
 ```
 
-## BFF Layer - API Routes
+### API Routes (BFF Layer)
 
-The Next.js API routes act as a BFF layer that:
-1. Receives requests from the frontend
-2. Forwards them to the backend server on port 3000
-3. Handles errors and transforms responses if needed
-4. Returns data to the frontend
-
-### Available API Routes:
+The Next.js API routes in `apps/web/app/api/` act as a BFF layer:
 
 - `GET /api/products` - Get all products
-- `GET /api/products/[id]` - Get specific product
-- `GET /api/suggestions?searchQuery=query` - Get product suggestions
+- `GET /api/products/[id]` - Get specific product  
+- `GET /api/suggestions?searchQuery=query` - Product search suggestions
 - `GET /api/cart` - Get cart contents
 - `POST /api/cart` - Add item to cart
 - `POST /api/cart/remove` - Remove item from cart
 - `PUT /api/user/password` - Update user password
 
-## Configuration
+## 📦 Package Management
 
-The backend server URL can be configured via environment variables:
+This monorepo uses **pnpm** for efficient package management with workspace support:
 
-```env
-BACKEND_SERVER_URL=http://localhost:3000  # Default if not specified
-PORT=3001  # Frontend server port
+```json
+{
+  "scripts": {
+    "dev": "cd apps/web && next dev",
+    "build": "nx build web", 
+    "start": "cd apps/web && next start",
+    "lint": "nx lint web",
+    "test": "nx test web",
+    "test:core": "nx test domain && nx test infrastructure && nx test hooks",
+    "server": "pnpm exec nx start server",
+    "server:dev": "pnpm exec nx dev server"
+  }
+}
 ```
 
-## Running the Application
+## 🛠️ Development Workflow
 
-1. Ensure your backend server is running on port 3000
-2. Configure environment variables in `.env.local`
-3. Start the Next.js development server: `pnpm dev`
-4. The application will be available at `http://localhost:3001`
+### Adding New Applications
 
-## Testing
+```bash
+# Add a mobile app
+nx g @nx/react-native:app mobile
 
-This project includes comprehensive testing setup with Jest and React Testing Library.
+# Add an admin dashboard  
+nx g @nx/next:app admin
+
+# Add a Node.js API server
+nx g @nx/node:app api-server
+
+# All apps can import shared libraries:
+# import { Button } from '@fruit-shop/ui-components';
+# import { useCart } from '@fruit-shop/hooks';
+```
+
+### Adding New Libraries
+
+```bash
+# Add a new feature library
+nx g @nx/react:lib feature-auth
+
+# Add a utility library
+nx g @nx/js:lib utils
+```
+
+### Building & Testing
+
+```bash
+# Build everything
+nx build web
+
+# Build specific library
+nx build ui-components
+
+# Start the backend server
+nx start server
+
+# Run all tests
+nx test web
+
+# Test specific library
+nx test domain
+
+# Build all libraries
+nx run-many --target=build --projects=domain,infrastructure,hooks,ui-components
+```
+
+## 🧪 Testing Strategy
 
 ### Test Structure
+```
+apps/web/test/                    # App-specific tests
+libs/domain/src/**/*.test.ts      # Domain logic unit tests  
+libs/infrastructure/src/**/*.test.ts # API integration tests
+libs/hooks/src/**/*.test.ts       # Hook behavior tests
+libs/ui-components/src/**/*.test.tsx # Component tests
+```
 
-```
-src/test/
-├── setup-jest.ts              # Jest test setup and mocks
-├── domain/services/           # Domain service unit tests
-│   └── CartService.test.ts    # Cart calculation logic tests
-├── components/                # Component integration tests
-│   └── ProductCard.integration.test.tsx
-└── infrastructure/repositories/ # API integration tests
-    └── CartRepository.test.ts  # API client tests
-```
+### Test Coverage by Library
+
+#### @fruit-shop/domain (Unit Tests)
+- **CartService**: Total calculations, quantity management, item grouping
+- **ProductService**: Filtering, sorting, search functionality  
+- **PasswordService**: Validation, strength calculation
+
+#### @fruit-shop/infrastructure (Integration Tests)
+- **ApiManager**: HTTP client orchestration
+- **Repositories**: API endpoint testing, error handling
+- **AxiosHttpClient**: HTTP request/response handling
+
+#### @fruit-shop/hooks (Hook Tests)
+- **useCart**: Cart state, optimistic updates, error handling
+- **useProducts**: Product fetching, filtering, caching
+- **useUser**: Authentication flows, profile management
+
+#### @fruit-shop/ui-components (Component Tests)  
+- **Atoms**: Basic UI component behavior
+- **Molecules**: Component composition and interactions
+- **Organisms**: Complex component integration
+- **Containers**: Full feature testing with mocked dependencies
 
 ### Running Tests
 
 ```bash
-# Run all tests
+# Test entire workspace
+nx test web
+
+# Test individual libraries  
+nx test domain
+nx test infrastructure
+nx test hooks
+nx test ui-components
+
+# Test with coverage
+nx test web --coverage
+
+# Test in watch mode
+nx test domain --watch
+## 🔧 Configuration
+
+### Environment Variables
+
+```env
+# apps/web/.env.local
+EXTERNAL_SERVER_URL=http://localhost:3002
+MOCK_SERVER_URL=http://localhost:3002
+NODE_ENV=development
+NEXT_PUBLIC_SITE_URL=https://fruitshop.com
+```
+
+### TypeScript Configuration
+
+The monorepo uses TypeScript project references for optimal build performance:
+
+```json
+// Root tsconfig.json
+{
+  "compilerOptions": {
+    "paths": {
+      "@fruit-shop/domain": ["./libs/domain/src/index.ts"],
+      "@fruit-shop/infrastructure": ["./libs/infrastructure/src/index.ts"], 
+      "@fruit-shop/hooks": ["./libs/hooks/src/index.ts"],
+      "@fruit-shop/ui-components": ["./libs/ui-components/src/index.ts"]
+    }
+  }
+}
+```
+
+### Nx Configuration
+
+```json
+// nx.json
+{
+  "defaultProject": "web",
+  "targetDefaults": {
+    "build": {
+      "dependsOn": ["^build"],
+      "cache": true
+    }
+  }
+}
+```
+
+## 🎨 Design System
+
+### Component Import Examples
+
+```typescript
+// Import UI components
+import { 
+  Button, 
+  Input, 
+  ProductCard, 
+  Header 
+} from '@fruit-shop/ui-components';
+
+// Import business logic
+import { 
+  Product, 
+  Cart, 
+  CartService 
+} from '@fruit-shop/domain';
+
+// Import React hooks
+import { 
+  useCart, 
+  useProducts, 
+  useAddToCart 
+} from '@fruit-shop/hooks';
+
+// Import API clients
+import ApiManager from '@fruit-shop/infrastructure';
+```
+
+### Atomic Design Implementation
+
+- **Atoms** (`libs/ui-components/src/lib/atoms/`): Button, Input, Label, Badge
+- **Molecules** (`libs/ui-components/src/lib/molecules/`): Modal, SearchBar, CartErrorBoundary
+- **Organisms** (`libs/ui-components/src/lib/organisms/`): ProductCard, Header, ProductFilters  
+- **Templates** (`libs/ui-components/src/lib/templates/`): AppLayout
+- **Containers** (`libs/ui-components/src/lib/containers/`): ProductsContainer, CartContainer
+
+## 🚀 Performance & SEO
+
+### Build Optimizations
+- **Library Caching**: Nx caches unchanged library builds
+- **Incremental Builds**: Only rebuilds what changed
+- **Tree Shaking**: Dead code elimination across libraries
+- **Bundle Splitting**: Automatic code splitting by library
+
+### SEO Features
+- **Static Site Generation**: Pre-rendered pages for optimal SEO
+- **Structured Data**: JSON-LD schema markup
+- **Meta Tags**: Open Graph, Twitter Card, SEO optimization
+- **Sitemap**: Auto-generated at `/sitemap.xml`
+- **Robots.txt**: SEO-friendly crawler configuration
+
+## 🔒 Benefits of This Architecture
+
+### Scalability
+- **Multiple Apps**: Easy to add mobile app, admin dashboard, etc.
+- **Shared Code**: Common logic in libraries prevents duplication
+- **Independent Deployment**: Apps can be deployed separately
+
+### Maintainability  
+- **Clear Boundaries**: Each library has single responsibility
+- **Type Safety**: Full TypeScript support across all libraries
+- **Dependency Management**: Clear dependency graph prevents circular imports
+
+### Developer Experience
+- **Fast Builds**: Nx task caching and incremental builds
+- **Hot Reloading**: Library changes auto-reload in development
+- **IntelliSense**: Full IDE support with path mapping
+
+### Team Collaboration
+- **Library Ownership**: Teams can own specific libraries
+- **API Contracts**: Clear interfaces between libraries
+- **Testing Isolation**: Libraries can be tested independently
+
+## 🏃‍♂️ Quick Start
+
+```bash
+# Install dependencies
+pnpm install
+
+# Start development server (web)
+pnpm dev
+
+# Start backend server
+pnpm server
+
+# Build for production
+pnpm build
+
+# Run tests
 pnpm test
 
-# Run only core functionality tests (recommended)
-pnpm test:core
-
-# Run tests in watch mode
-pnpm test:watch
-
-# Run tests with coverage
-pnpm test:coverage
-
-# Run specific test file
-npx jest src/test/domain/services/CartService.test.ts
+# Build all libraries
+nx run-many --target=build --all
 ```
 
-### Test Coverage
+## 📚 Library Dependencies
 
-The test suite covers:
-
-#### CartService (15 tests)
-- **calculateTotals**: Empty cart, zero quantities, decimal price handling
-- **getItemQuantityInCart**: Existing/non-existing product quantity lookup
-- **groupItemsByProductId**: Product grouping and quantity aggregation
-- **removeItemsPartially**: Partial removal, quantity management, edge cases
-
-#### CartRepository (15 tests)
-- **getCart**: Successful responses, empty carts, API error handling
-- **addToCart**: Item addition, cart updates, failure scenarios
-- **removeFromCart**: Item removal, partial removal, invalid product IDs
-- **Edge Cases**: Malformed responses, network timeouts, concurrent operations
-
-#### Integration Tests
-- **ProductCard**: User interactions, cart integration, accessibility compliance
-- **Form Validation**: Input handling, error states, user feedback
-- **API Integration**: HTTP client behavior, error scenarios, data transformation
-
-### Test Configuration
-
-The project uses:
-- **Jest**: Testing framework with TypeScript support
-- **React Testing Library**: Component testing utilities
-- **jsdom**: DOM environment simulation
-- **User Events**: Realistic user interaction simulation
-
-### Mocking Strategy
-
-Tests include comprehensive mocks for:
-- Next.js router and navigation
-- Next.js Image component
-- Lucide React icons
-- React Query client
-- API HTTP client
-
-### Best Practices
-
-- **Unit Tests**: Focus on business logic and calculations
-- **Integration Tests**: Test component behavior and user interactions
-- **API Tests**: Verify HTTP client integration and error handling
-- **Accessibility Testing**: Ensure WCAG 2.1 AA compliance
-- **Error Scenarios**: Test edge cases and failure conditions
-
-## SEO & Performance Features
-
-### Static Site Generation (SSG)
-- **Home Page**: Generated at build time for optimal SEO and performance
-- **Structured Data**: JSON-LD schema markup for better search engine understanding
-- **Meta Tags**: Comprehensive Open Graph, Twitter Card, and SEO meta tags
-- **Sitemap**: Auto-generated sitemap at `/sitemap.xml`
-- **Robots.txt**: SEO-friendly robots configuration
-
-### Performance Optimizations
-- **Image Optimization**: WebP/AVIF format support with responsive sizing
-- **Security Headers**: CSP, HSTS, and other security headers configured
-- **PWA Ready**: Web app manifest for mobile app-like experience
-- **Core Web Vitals**: Optimized for Google's page experience signals
-
-### SEO Configuration
-```env
-NEXT_PUBLIC_SITE_URL=https://fruitshop.com
-GOOGLE_VERIFICATION_CODE=your-verification-code
+```
+web (Next.js app)
+├── @fruit-shop/ui-components
+│   ├── @fruit-shop/hooks
+│   │   ├── @fruit-shop/domain
+│   │   └── @fruit-shop/infrastructure
+│   │       └── @fruit-shop/domain
+│   └── @fruit-shop/domain
+├── config/
+└── apps/server (JSON Server)
+    └── @fruit-shop/domain (for types)
 ```
 
-## Benefits of BFF Pattern
+This dependency graph ensures clean separation of concerns and prevents circular dependencies.
 
-1. **Security**: API keys and sensitive data can be handled server-side
-2. **Request Transformation**: Can modify requests/responses for frontend needs
-3. **Error Handling**: Centralized error handling and user-friendly error messages
-4. **Caching**: Can implement caching strategies at the BFF level
-5. **Rate Limiting**: Can implement rate limiting for backend API calls
-6. **CORS Handling**: Eliminates CORS issues by proxying requests
+## 🎯 Next Steps
 
-## Domain-Driven Design (DDD)
+With this Nx monorepo structure, you can:
 
-The project follows DDD principles with:
+1. **Add New Apps**: Mobile app, admin dashboard, marketing site
+2. **Extend Libraries**: Add new UI components, business logic, or API integrations  
+3. **Scale Teams**: Different teams can own different libraries
+4. **Deploy Independently**: Each app can have its own deployment pipeline
+5. **Share Code**: Maximum code reuse across all applications
 
-- **Domain Layer**: Entities, Services, and business logic
-- **Infrastructure Layer**: API clients, repositories, and external service integrations
-- **Application Layer**: Hooks that orchestrate domain services
-- **Presentation Layer**: Atomic design components (atoms, molecules, organisms)
-
-## Atomic Design
-
-Components are organized following atomic design principles:
-
-- **Atoms**: Basic UI components (Button, Input, Label)
-- **Molecules**: Simple component combinations (SearchBar, PasswordStrength)
-- **Organisms**: Complex components (ProductCard, Header)
-- **Templates**: Page layouts (AppLayout)
-- **Pages**: Route-specific containers (ProductsContainer, CartContainer)
-
-## Quick Commands
-
-### Development
-```bash
-pnpm dev          # Start development server
-pnpm build        # Build for production
-pnpm start        # Start production server
-pnpm lint         # Run ESLint
-```
-
-### Testing
-```bash
-pnpm test         # Run all tests
-pnpm test:core    # Run core functionality tests (recommended)
-pnpm test:watch   # Run tests in watch mode
-pnpm test:coverage # Run tests with coverage report
-```
-
-### Environment Setup
-```bash
-cp .env.example .env.local  # Copy environment template
-# Edit .env.local with your configuration
-```
+The monorepo is production-ready and follows enterprise-grade patterns for long-term scalability! 🚀

@@ -1,0 +1,17 @@
+{
+    "name": "@fruit-shop/hooks",
+    "version": "0.1.0",
+    "type": "module",
+    "main": "src/index.ts",
+    "types": "src/index.ts",
+    "exports": {
+        ".": {
+            "import": "./src/index.ts",
+            "types": "./src/index.ts"
+        }
+    },
+    "peerDependencies": {
+        "react": ">=18.0.0",
+        "@tanstack/react-query": ">=5.0.0"
+    }
+}

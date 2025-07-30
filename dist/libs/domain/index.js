@@ -1,0 +1,152 @@
+class l {
+  static addToCart(t, r, s) {
+    const e = t.items.findIndex((a) => a.productId === r.id);
+    let n;
+    if (e >= 0)
+      n = t.items.map(
+        (a, i) => i === e ? { ...a, quantity: a.quantity + s } : a
+      );
+    else {
+      const a = {
+        productId: r.id,
+        productName: r.name,
+        price: r.price,
+        quantity: s,
+        image: r.image,
+        packageSize: r.packageSize
+      };
+      n = [...t.items, a];
+    }
+    return this.calculateTotals({ ...t, items: n });
+  }
+  static removeFromCart(t, r, s) {
+    const e = t.items.map(
+      (n) => n.productId === r ? { ...n, quantity: Math.max(0, n.quantity - s) } : n
+    ).filter((n) => n.quantity > 0);
+    return this.calculateTotals({ ...t, items: e });
+  }
+  static calculateTotals(t) {
+    const r = t.items.reduce((e, n) => e + n.quantity, 0), s = t.items.reduce((e, n) => e + n.price * n.quantity, 0);
+    return {
+      ...t,
+      totalItems: r,
+      totalPrice: s
+    };
+  }
+  static getItemQuantityInCart(t, r) {
+    return t.items.filter((s) => s.productId === r).reduce((s, e) => s + e.quantity, 0);
+  }
+  static groupItemsByProductId(t) {
+    const r = t.reduce((s, e) => (s[e.productId] ? s[e.productId] = {
+      ...s[e.productId],
+      quantity: s[e.productId].quantity + e.quantity
+    } : s[e.productId] = { ...e }, s), {});
+    return Object.values(r);
+  }
+  static removeItemsPartially(t, r, s) {
+    let e = s;
+    const n = [];
+    for (const a of t.items)
+      if (a.productId === r && e > 0) {
+        const i = a.quantity;
+        i <= e ? e -= i : (n.push({
+          ...a,
+          quantity: i - e
+        }), e = 0);
+      } else
+        n.push(a);
+    return this.calculateTotals({ ...t, items: n });
+  }
+}
+class d {
+  static filterProducts(t, r) {
+    let s = t;
+    if (r.searchQuery) {
+      const e = r.searchQuery.toLowerCase();
+      s = s.filter(
+        (n) => n.name.toLowerCase().includes(e)
+      );
+    }
+    return r.colors.length > 0 && (s = s.filter(
+      (e) => e.colors.some((n) => r.colors.includes(n))
+    )), s = this.sortProducts(s, r.sortOrder), s;
+  }
+  static sortProducts(t, r) {
+    const s = [...t];
+    switch (r) {
+      case "name-asc":
+        return s.sort((e, n) => e.name.localeCompare(n.name));
+      case "name-desc":
+        return s.sort((e, n) => n.name.localeCompare(e.name));
+      case "price-asc":
+        return s.sort((e, n) => e.price - n.price);
+      case "price-desc":
+        return s.sort((e, n) => n.price - e.price);
+      case "discount-desc":
+        return s.sort((e, n) => n.discount - e.discount);
+      default:
+        return s;
+    }
+  }
+  static calculateDiscountedPrice(t, r) {
+    return t * (1 - r / 100);
+  }
+  static isValidQuantity(t, r) {
+    return t > 0 && t % r === 0;
+  }
+  static getMaxValidQuantity(t, r) {
+    return Math.floor(t / r) * r;
+  }
+}
+class m {
+  static calculateStrength(t) {
+    const r = [
+      {
+        name: "At least 8 characters",
+        met: t.length >= 8,
+        points: 10
+      },
+      {
+        name: "At least one lowercase letter",
+        met: /[a-z]/.test(t),
+        points: 5
+      },
+      {
+        name: "At least one uppercase letter",
+        met: /[A-Z]/.test(t),
+        points: 5
+      },
+      {
+        name: "At least one digit",
+        met: /\d/.test(t),
+        points: 5
+      },
+      {
+        name: "At least one symbol",
+        met: /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(t),
+        points: 10
+      },
+      {
+        name: "At least 5 unique characters",
+        met: new Set(t).size >= 5,
+        points: 5
+      }
+    ], s = r.filter((c) => c.met), e = s.reduce((c, u) => c + u.points, 0), n = s.length * 10, a = e + n, i = Math.min(100, a);
+    return {
+      score: a,
+      percentage: i,
+      rules: r
+    };
+  }
+  static isStrongPassword(t) {
+    return this.calculateStrength(t).percentage >= 80;
+  }
+  static getStrengthLevel(t) {
+    return t < 50 ? "weak" : t < 80 ? "medium" : "strong";
+  }
+}
+export {
+  l as CartService,
+  m as PasswordService,
+  d as ProductService
+};
