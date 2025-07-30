@@ -15,6 +15,7 @@
     "test:core": "nx test domain && nx test infrastructure && nx test hooks",
     "server": "pnpm exec nx start server",
     "server:dev": "pnpm exec nx dev server",
+    "server:install": "cd apps/server && npm install",
     "deploy": "vercel --prod",
     "preview": "vercel",
     "ci:install": "pnpm install --frozen-lockfile || pnpm install --no-frozen-lockfile"
