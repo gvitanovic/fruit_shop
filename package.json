@@ -7,7 +7,7 @@
     "build": "pnpm build:libs && pnpm nx build web",
     "build:libs": "nx run-many -t build --projects=domain,infrastructure,hooks,ui-components",
     "build:all": "nx run-many -t build",
-    "start": "cd apps/web && next start",
+    "start": "cd dist/apps/web && next start",
     "lint": "nx lint web",
     "test": "nx test web",
     "test:watch": "nx test web --watch",

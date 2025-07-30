@@ -19,6 +19,12 @@
 
 # production
 /build
+/dist
+
+# nx
+.nx/cache
+.nx/workspace-data
+.nx/installation
 
 # misc
 .DS_Store
