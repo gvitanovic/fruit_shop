@@ -63,15 +63,6 @@
       "id": 2
     },
     {
-      "productId": "5",
-      "productName": "Pineapple",
-      "price": 4.99,
-      "quantity": 2,
-      "image": "/assets/pineapple.jpeg",
-      "packageSize": 1,
-      "id": 3
-    },
-    {
       "productId": "3",
       "productName": "Apple",
       "price": 1.592,
