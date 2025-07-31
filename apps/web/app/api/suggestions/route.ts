@@ -31,20 +31,10 @@ export async function GET(request: NextRequest) {
     } catch (error) {
         console.error('Error fetching suggestions:', error);
 
-        // Return sample suggestions when backend is not available
-        const { searchParams } = new URL(request.url);
-        const searchQuery = searchParams.get('searchQuery') || '';
-
-        const sampleSuggestions = ['Apple', 'Banana', 'Orange', 'Lime', 'Pineapple'];
-        const filteredSuggestions = searchQuery
-            ? sampleSuggestions.filter(suggestion =>
-                suggestion.toLowerCase().includes(searchQuery.toLowerCase())
-            )
-            : [];
-
         return NextResponse.json({
-            success: true,
-            data: filteredSuggestions
-        });
+            success: false,
+            error: 'Failed to fetch suggestions from backend server',
+            data: []
+        }, { status: 500 });
     }
 }
