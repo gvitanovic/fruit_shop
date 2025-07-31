@@ -2,6 +2,7 @@
 
 import { ReactNode } from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+
 import { Header } from '../../organisms/Header/Header';
 
 const queryClient = new QueryClient({
