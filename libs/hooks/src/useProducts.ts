@@ -29,7 +29,6 @@ export const useFilteredProducts = (filters: ProductFilters) => {
         staleTime: 30 * 60 * 1000, // 30 minutes cache
         gcTime: 30 * 60 * 1000, // Keep in cache for 30 minutes after component unmount
         retry: 1,
-        placeholderData: []
     });
 };
 
