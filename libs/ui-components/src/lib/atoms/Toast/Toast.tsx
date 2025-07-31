@@ -42,14 +42,14 @@ const iconStyles = {
     info: 'text-blue-500',
 };
 
-export const Toast = ({ id, type, title, message, duration = 5000, onClose }: ToastProps) => {
+export const Toast = ({ id, type, title, message, duration = 3000, onClose }: ToastProps) => {
     const [isVisible, setIsVisible] = useState(true);
     const Icon = toastIcons[type];
 
     useEffect(() => {
         const timer = setTimeout(() => {
             setIsVisible(false);
-            setTimeout(() => onClose(id), 300); // Allow time for exit animation
+            setTimeout(() => onClose(id), 300);
         }, duration);
 
         return () => clearTimeout(timer);
