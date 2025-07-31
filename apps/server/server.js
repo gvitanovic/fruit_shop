@@ -29,17 +29,25 @@ server.get('/health', (req, res) => {
 
 server.use(middlewares);
 
-// Apply authentication to all routes except health check
-server.use('/products*', authenticate);
-server.use('/cart*', authenticate);
-server.use('/suggestions*', authenticate);
-
+// Custom suggestions endpoint with auth
 server.get('/suggestions', authenticate, (req, res) => {
+  const searchQuery = req.query.searchQuery || '';
   const suggestions = db.products
-    .filter(product => product.name.toLowerCase().includes(req.query.searchQuery.toLowerCase()))
+    .filter(product => product.name.toLowerCase().includes(searchQuery.toLowerCase()))
     .map(product => product.name);
   res.json(suggestions);
-})
+});
+
+// Apply authentication to JSON Server routes
+server.use((req, res, next) => {
+  // Skip authentication for health check
+  if (req.path === '/health') {
+    return next();
+  }
+  
+  // Apply authentication to all other routes
+  authenticate(req, res, next);
+});
 
 server.use(router);
 server.listen(port, () => {

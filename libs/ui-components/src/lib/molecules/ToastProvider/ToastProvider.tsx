@@ -5,10 +5,10 @@ import { Toast, ToastProps, ToastType } from '../../atoms/Toast/Toast';
 
 interface ToastContextType {
     showToast: (toast: Omit<ToastProps, 'id' | 'onClose'>) => void;
-    showSuccess: (title: string, message?: string) => void;
-    showError: (title: string, message?: string) => void;
-    showWarning: (title: string, message?: string) => void;
-    showInfo: (title: string, message?: string) => void;
+    showSuccess: (title: string, message?: string, duration?: number) => void;
+    showError: (title: string, message?: string, duration?: number) => void;
+    showWarning: (title: string, message?: string, duration?: number) => void;
+    showInfo: (title: string, message?: string, duration?: number) => void;
 }
 
 const ToastContext = createContext<ToastContextType | null>(null);
@@ -42,20 +42,20 @@ export const ToastProvider = ({ children }: ToastProviderProps) => {
         setToasts(prev => [...prev, newToast]);
     }, [removeToast]);
 
-    const showSuccess = useCallback((title: string, message?: string) => {
-        showToast({ type: 'success', title, message });
+    const showSuccess = useCallback((title: string, message?: string, duration?: number) => {
+        showToast({ type: 'success', title, message, duration });
     }, [showToast]);
 
-    const showError = useCallback((title: string, message?: string) => {
-        showToast({ type: 'error', title, message });
+    const showError = useCallback((title: string, message?: string, duration?: number) => {
+        showToast({ type: 'error', title, message, duration });
     }, [showToast]);
 
-    const showWarning = useCallback((title: string, message?: string) => {
-        showToast({ type: 'warning', title, message });
+    const showWarning = useCallback((title: string, message?: string, duration?: number) => {
+        showToast({ type: 'warning', title, message, duration });
     }, [showToast]);
 
-    const showInfo = useCallback((title: string, message?: string) => {
-        showToast({ type: 'info', title, message });
+    const showInfo = useCallback((title: string, message?: string, duration?: number) => {
+        showToast({ type: 'info', title, message, duration });
     }, [showToast]);
 
     const contextValue: ToastContextType = {

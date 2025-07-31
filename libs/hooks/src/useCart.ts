@@ -25,7 +25,8 @@ export const useCart = () => {
             queryClient.invalidateQueries({ queryKey: ['cart'] });
             showSuccess(
                 'Added to Cart',
-                `Successfully added ${variables.quantity} ${variables.productName} to your cart`
+                `Successfully added ${variables.quantity} ${variables.productName} to your cart`,
+                2500 // 2.5 seconds for cart operations
             );
         },
         onError: (error, variables) => {
@@ -49,7 +50,8 @@ export const useRemoveFromCart = () => {
             queryClient.invalidateQueries({ queryKey: ['cart'] });
             showSuccess(
                 'Removed from Cart',
-                `Successfully removed ${variables.quantity} item${variables.quantity > 1 ? 's' : ''} from cart`
+                `Successfully removed ${variables.quantity} item${variables.quantity > 1 ? 's' : ''} from cart`,
+                2500 // 2.5 seconds for cart operations
             );
         },
         onError: (error, variables) => {

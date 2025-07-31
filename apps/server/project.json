@@ -7,19 +7,28 @@
         "start": {
             "executor": "nx:run-commands",
             "options": {
-                "command": "node apps/server/server.js"
+                "command": "node server.js",
+                "cwd": "apps/server",
+                "env": {
+                    "PORT": "3002"
+                }
             }
         },
         "serve": {
             "executor": "nx:run-commands",
             "options": {
-                "command": "node apps/server/server.js"
+                "command": "node server.js",
+                "cwd": "apps/server"
             }
         },
         "dev": {
             "executor": "nx:run-commands",
             "options": {
-                "command": "node apps/server/server.js"
+                "command": "node server.js",
+                "cwd": "apps/server",
+                "env": {
+                    "PORT": "3002"
+                }
             }
         },
         "build": {
