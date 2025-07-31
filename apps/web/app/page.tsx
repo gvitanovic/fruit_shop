@@ -156,7 +156,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Organization",
+            "@type": ["Organization", "OnlineStore"],
             "name": "FruitShop",
             "description": "Premium fresh fruit delivery service",
             "url": "https://fruitshop.com",
@@ -166,6 +166,34 @@ export default function Home() {
               "https://facebook.com/fruitshop",
               "https://instagram.com/fruitshop"
             ],
+
+            // Sitelinks structure
+            "mainEntity": [
+              {
+                "@type": "CollectionPage",
+                "name": "Fresh Fruits",
+                "url": "https://fruitshop.com/products",
+                "description": "Browse our premium selection of fresh fruits"
+              },
+              {
+                "@type": "WebPage",
+                "name": "Shopping Cart",
+                "url": "https://fruitshop.com/cart",
+                "description": "Review your items and checkout"
+              }
+            ],
+
+            // Search box in results
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://fruitshop.com/products?search={search_term_string}"
+              },
+              "query-input": "required name=search_term_string"
+            },
+
+            // Your existing contact info...
             "contactPoint": {
               "@type": "ContactPoint",
               "telephone": "+1-555-FRUIT",
