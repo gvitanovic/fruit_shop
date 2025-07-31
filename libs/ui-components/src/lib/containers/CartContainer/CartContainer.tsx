@@ -14,6 +14,8 @@ export const CartContainer = () => {
 
     // Track quantities to remove for each product
     const [removeQuantities, setRemoveQuantities] = useState<Record<string, number>>({});
+    // Track which item is currently being removed
+    const [removingItemId, setRemovingItemId] = useState<string | null>(null);
 
     const handleQuantityChange = (productId: string, value: string) => {
         const num = Math.max(0, parseInt(value) || 0);
@@ -40,8 +42,16 @@ export const CartContainer = () => {
     const handleRemoveFromCart = (productId: string) => {
         const quantity = removeQuantities[productId] || 0;
         if (quantity > 0) {
-            removeFromCart({ productId, quantity });
-            setRemoveQuantities(prev => ({ ...prev, [productId]: 0 }));
+            setRemovingItemId(productId);
+            removeFromCart(
+                { productId, quantity },
+                {
+                    onSettled: () => {
+                        setRemovingItemId(null);
+                        setRemoveQuantities(prev => ({ ...prev, [productId]: 0 }));
+                    }
+                }
+            );
         }
     };
 
@@ -88,6 +98,7 @@ export const CartContainer = () => {
                     const removeQuantity = removeQuantities[item.productId] || 0;
                     const canRemove = removeQuantity > 0 && removeQuantity <= item.quantity;
                     const isValidRemoveQuantity = removeQuantity % item.packageSize === 0;
+                    const isRemoving = removingItemId === item.productId;
 
                     return (
                         <div key={item.productId} className="bg-white p-6 rounded-lg shadow-md">
@@ -156,10 +167,10 @@ export const CartContainer = () => {
                                             variant="destructive"
                                             size="sm"
                                             onClick={() => handleRemoveFromCart(item.productId)}
-                                            disabled={!canRemove || !isValidRemoveQuantity || isPending}
+                                            disabled={!canRemove || !isValidRemoveQuantity || isRemoving}
                                         >
                                             <Trash2 className="w-4 h-4 mr-1" />
-                                            {isPending ? 'Removing...' : 'Remove'}
+                                            {isRemoving ? 'Removing...' : 'Remove'}
                                         </Button>
                                     </div>
 

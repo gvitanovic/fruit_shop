@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { config } from '../../../config';
+import { serverHttpClient } from '../../../lib/serverHttpClient';
 
 export async function GET(request: NextRequest) {
     try {
@@ -16,35 +16,13 @@ export async function GET(request: NextRequest) {
         if (sort) backendParams.append('sort', sort);
 
         const queryString = backendParams.toString();
-        const backendUrl = queryString
-            ? `${config.backendServer.url}/products?${queryString}`
-            : `${config.backendServer.url}/products`;
+        const endpoint = queryString ? `/products?${queryString}` : '/products';
 
-        const response = await fetch(backendUrl, {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-        });
-
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-
-        let data = await response.json();
+        let data = await serverHttpClient.get(endpoint);
 
         // If backend returned empty array but we have filters, try getting all products and filter client-side
         if (Array.isArray(data) && data.length === 0 && (search || colors || sort)) {
-            const allProductsResponse = await fetch(`${config.backendServer.url}/products`, {
-                method: 'GET',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-            });
-
-            if (allProductsResponse.ok) {
-                data = await allProductsResponse.json();
-            }
+            data = await serverHttpClient.get('/products');
         }
 
         // Transform backend data to match frontend Product interface

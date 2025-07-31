@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { config } from '../../../../config';
+import { serverHttpClient } from '../../../../lib/serverHttpClient';
 import { CartItem } from '@fruit-shop/domain';
 
 export async function POST(request: NextRequest) {
@@ -8,18 +8,7 @@ export async function POST(request: NextRequest) {
         const { productId, quantity: quantityToRemove } = body;
 
         // First, get current cart items to find which ones to delete
-        const cartResponse = await fetch(`${config.backendServer.url}/cart`, {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-        });
-
-        if (!cartResponse.ok) {
-            throw new Error(`HTTP error! status: ${cartResponse.status}`);
-        }
-
-        const cartData = await cartResponse.json();
+        const cartData = await serverHttpClient.get('/cart');
         const cartItems = Array.isArray(cartData) ? cartData.filter(item =>
             item.productId && item.id !== undefined
         ) : [];
@@ -58,15 +47,10 @@ export async function POST(request: NextRequest) {
 
         // Delete the selected items
         for (const id of idsToDelete) {
-            const deleteResponse = await fetch(`${config.backendServer.url}/cart/${id}`, {
-                method: 'DELETE',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-            });
-
-            if (!deleteResponse.ok) {
-                console.error(`Failed to delete item ${id}`);
+            try {
+                await serverHttpClient.delete(`/cart/${id}`);
+            } catch (error) {
+                console.error(`Failed to delete item ${id}:`, error);
             }
         }
 
@@ -77,39 +61,22 @@ export async function POST(request: NextRequest) {
             const lastRemovedItem = matchingItems[matchingItems.length - 1];
 
             // Add back the excess quantity
-            const addBackResponse = await fetch(`${config.backendServer.url}/cart`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
+            try {
+                await serverHttpClient.post('/cart', {
                     productId: lastRemovedItem.productId,
                     productName: lastRemovedItem.productName,
                     price: lastRemovedItem.price,
                     quantity: overRemoved,
                     image: lastRemovedItem.image,
                     packageSize: lastRemovedItem.packageSize
-                }),
-            });
-
-            if (!addBackResponse.ok) {
-                console.error('Failed to add back excess quantity');
+                });
+            } catch (error) {
+                console.error('Failed to add back excess quantity:', error);
             }
         }
 
         // After deletion, fetch the updated cart
-        const updatedCartResponse = await fetch(`${config.backendServer.url}/cart`, {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-        });
-
-        if (!updatedCartResponse.ok) {
-            throw new Error(`HTTP error! status: ${updatedCartResponse.status}`);
-        }
-
-        const updatedCartData = await updatedCartResponse.json();
+        const updatedCartData = await serverHttpClient.get('/cart');
 
         // Apply the same grouping logic as in GET /api/cart
         const validItems = Array.isArray(updatedCartData) ? updatedCartData.filter((item: CartItem) =>

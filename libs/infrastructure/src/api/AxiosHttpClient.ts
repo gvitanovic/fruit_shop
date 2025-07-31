@@ -4,8 +4,9 @@ import { ApiException } from './types';
 
 export class AxiosHttpClient implements HttpClient {
     private axiosInstance: AxiosInstance;
+    private apiKey?: string;
 
-    constructor(baseURL: string, timeout = 10000) {
+    constructor(baseURL: string, apiKey?: string, timeout = 10000) {
         this.axiosInstance = axios.create({
             baseURL,
             timeout,
@@ -14,6 +15,7 @@ export class AxiosHttpClient implements HttpClient {
             },
         });
 
+        this.apiKey = apiKey;
         this.setupInterceptors();
     }
 
@@ -21,7 +23,12 @@ export class AxiosHttpClient implements HttpClient {
         // Request interceptor
         this.axiosInstance.interceptors.request.use(
             (config) => {
-                // Add auth token if available
+                // Add API key if available
+                if (this.apiKey) {
+                    config.headers['X-API-Key'] = this.apiKey;
+                }
+
+                // Add auth token if available (for future user authentication)
                 const token = this.getAuthToken();
                 if (token) {
                     config.headers.Authorization = `Bearer ${token}`;

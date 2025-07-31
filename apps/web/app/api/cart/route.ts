@@ -1,21 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { config } from '../../../config';
+import { serverHttpClient } from '../../../lib/serverHttpClient';
 import { CartItem } from '@fruit-shop/domain';
 
 export async function GET() {
     try {
-        const response = await fetch(`${config.backendServer.url}/cart`, {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-        });
-
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-
-        const data = await response.json();
+        const data = await serverHttpClient.get('/cart');
 
         // Transform backend array response to expected Cart format
         const validItems = Array.isArray(data) ? data.filter((item: CartItem) =>
@@ -71,20 +60,7 @@ export async function GET() {
 } export async function POST(request: NextRequest) {
     try {
         const body = await request.json();
-
-        const response = await fetch(`${config.backendServer.url}/cart`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(body),
-        });
-
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-
-        const data = await response.json();
+        const data = await serverHttpClient.post('/cart', body);
         return NextResponse.json(data);
     } catch (error) {
         console.error('Error adding to cart:', error);

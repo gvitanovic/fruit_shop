@@ -1,23 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { config } from '../../../config';
+import { serverHttpClient } from '../../../lib/serverHttpClient';
 
 export async function GET(request: NextRequest) {
     try {
         const { searchParams } = new URL(request.url);
         const searchQuery = searchParams.get('searchQuery') || '';
 
-        const response = await fetch(`${config.backendServer.url}/suggestions?searchQuery=${encodeURIComponent(searchQuery)}`, {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-        });
-
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-
-        const data = await response.json();
+        const data = await serverHttpClient.get(`/suggestions?searchQuery=${encodeURIComponent(searchQuery)}`);
 
         // If the backend returns data directly as array, wrap it in ApiResponse format
         if (Array.isArray(data)) {
