@@ -3,7 +3,7 @@
 import { createContext, useContext, useCallback, ReactNode, useState } from 'react';
 import { Toast, ToastProps, ToastType } from '../../atoms/Toast/Toast';
 
-interface ToastContextType {
+export interface ToastContextType {
     showToast: (toast: Omit<ToastProps, 'id' | 'onClose'>) => void;
     showSuccess: (title: string, message?: string, duration?: number) => void;
     showError: (title: string, message?: string, duration?: number) => void;
@@ -12,6 +12,8 @@ interface ToastContextType {
 }
 
 const ToastContext = createContext<ToastContextType | null>(null);
+
+export { ToastContext };
 
 export const useToast = () => {
     const context = useContext(ToastContext);

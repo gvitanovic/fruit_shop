@@ -1,7 +1,6 @@
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { CartItem } from '@fruit-shop/domain';
 import ApiManager from '@fruit-shop/infrastructure';
-import { useToast } from './useToast';
 
 export const useCart = () => {
     return useQuery({
@@ -15,23 +14,21 @@ export const useCart = () => {
             totalItems: 0
         }
     });
-}; export const useAddToCart = () => {
+}; export const useAddToCart = (onSuccess?: (message: string, description: string) => void, onError?: (title: string, message: string) => void) => {
     const queryClient = useQueryClient();
-    const { showSuccess, showError } = useToast();
 
     return useMutation({
         mutationFn: (item: CartItem) => ApiManager.getInstance().cart.addToCart(item),
         onSuccess: (data, variables) => {
             queryClient.invalidateQueries({ queryKey: ['cart'] });
-            showSuccess(
+            onSuccess?.(
                 'Added to Cart',
-                `Successfully added ${variables.quantity} ${variables.productName} to your cart`,
-                2500 // 2.5 seconds for cart operations
+                `Successfully added ${variables.quantity} ${variables.productName} to your cart`
             );
         },
         onError: (error, variables) => {
             console.error('Failed to add item to cart:', error);
-            showError(
+            onError?.(
                 'Failed to Add Item',
                 `Could not add ${variables.productName} to cart. Please try again.`
             );
@@ -39,24 +36,22 @@ export const useCart = () => {
     });
 };
 
-export const useRemoveFromCart = () => {
+export const useRemoveFromCart = (onSuccess?: (message: string, description: string) => void, onError?: (title: string, message: string) => void) => {
     const queryClient = useQueryClient();
-    const { showSuccess, showError } = useToast();
 
     return useMutation({
         mutationFn: ({ productId, quantity }: { productId: string; quantity: number }) =>
             ApiManager.getInstance().cart.removeFromCart(productId, quantity),
         onSuccess: (data, variables) => {
             queryClient.invalidateQueries({ queryKey: ['cart'] });
-            showSuccess(
+            onSuccess?.(
                 'Removed from Cart',
-                `Successfully removed ${variables.quantity} item${variables.quantity > 1 ? 's' : ''} from cart`,
-                2500 // 2.5 seconds for cart operations
+                `Successfully removed ${variables.quantity} item${variables.quantity > 1 ? 's' : ''} from cart`
             );
         },
         onError: (error, variables) => {
             console.error('Failed to remove item from cart:', error);
-            showError(
+            onError?.(
                 'Failed to Remove Item',
                 'Could not remove items from cart. Please try again.'
             );

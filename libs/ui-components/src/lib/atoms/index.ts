@@ -6,4 +6,4 @@ export { Spinner } from './Spinner/Spinner';
 export { Select } from './Select/Select';
 export { Portal } from './Portal/Portal';
 export { ErrorBoundary } from './ErrorBoundary/ErrorBoundary';
-export { Toast, type ToastProps } from './Toast/Toast';
+export { Toast, type ToastProps, type ToastType, type ToastMessage } from './Toast/Toast';

@@ -5,12 +5,18 @@ import { useCart, useRemoveFromCart } from '@fruit-shop/hooks';
 import { Button } from '../../atoms/Button/Button';
 import { Input } from '../../atoms/Input/Input';
 import { Spinner } from '../../atoms/Spinner/Spinner';
+import { useToast } from '../../hooks/useToast';
 import { Trash2, Minus, Plus } from 'lucide-react';
 import Image from 'next/image';
 
 export const CartContainer = () => {
     const { data: cart, isLoading, error } = useCart();
-    const { mutate: removeFromCart, isPending } = useRemoveFromCart();
+    const { showSuccess, showError } = useToast();
+    
+    const { mutate: removeFromCart, isPending } = useRemoveFromCart(
+        (title, message) => showSuccess(title, message, 2500),
+        (title, message) => showError(title, message)
+    );
 
     // Track quantities to remove for each product
     const [removeQuantities, setRemoveQuantities] = useState<Record<string, number>>({});

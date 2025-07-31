@@ -7,6 +7,7 @@ import { Button } from '../../atoms/Button/Button';
 import { Input } from '../../atoms/Input/Input';
 import { Badge } from '../../atoms/Badge/Badge';
 import { Modal } from '../../molecules/Modal/Modal';
+import { useToast } from '../../hooks/useToast';
 import { ShoppingCart, Eye } from 'lucide-react';
 import Image from 'next/image';
 
@@ -19,7 +20,12 @@ export const ProductCard = ({ product }: ProductCardProps) => {
     const [showDetails, setShowDetails] = useState(false);
 
     const { data: cart } = useCart();
-    const { mutate: addToCart, isPending } = useAddToCart();
+    const { showSuccess, showError } = useToast();
+    
+    const { mutate: addToCart, isPending } = useAddToCart(
+        (title, message) => showSuccess(title, message, 2500),
+        (title, message) => showError(title, message)
+    );
 
     const discountedPrice = ProductService.calculateDiscountedPrice(product.price, product.discount);
     const currentCartQuantity = cart ? CartService.getItemQuantityInCart(cart, product.id) : 0;

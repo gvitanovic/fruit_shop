@@ -6,6 +6,12 @@ import { Button } from '../Button/Button';
 
 export type ToastType = 'success' | 'error' | 'warning' | 'info';
 
+export interface ToastMessage {
+    type: ToastType;
+    title: string;
+    message?: string;
+}
+
 export interface ToastProps {
     id: string;
     type: ToastType;
